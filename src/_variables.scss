@@ -1,0 +1,17 @@
+$main_text_color__light: #333;
+$bg_color__light: #FAF1E6;
+$primary_color__light: #064420;
+$secondary_color__light: #E4EFE7;
+$tertiary_color__light: #FDFAF6;
+
+$main_text_color__dark: #fffcfc;
+$bg_color__dark: #333;
+$primary_color__dark: #A23131;
+$secondary_color__dark: #A1DD70;
+$tertiary_color__dark: #E8ECD6;
+
+@mixin flex_center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
