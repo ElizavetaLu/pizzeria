@@ -1,0 +1,57 @@
+@import "../../../../variables";
+
+.circle-section {
+    display: flex;
+    justify-content: center;
+    height: 38vw;
+    overflow: hidden;
+
+    .main-circle {
+        @include flex-center;
+        @include on-circle($item-count: 20, $circle-size: 70vw, $item-size: 10px);
+        margin: 5em auto 0;
+        border: solid 2px #333;
+
+        &__dot {
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: #333;
+
+            &--hidden {
+                display: none;
+            }
+        }
+
+        &__dot-item {
+            font-size: 18px;
+            text-transform: capitalize;
+            position: absolute;
+            white-space: nowrap;
+            cursor: pointer;
+
+            &--hidden {
+                display: none;
+            }
+        }
+
+        .additional-circle {
+            @include flex-center;
+            flex-direction: column;
+            border-top: 1.5px solid #000;
+            border-bottom: 1.5px solid #000;
+            padding: 60px;
+            border-radius: 100%;
+            transition: all .9s ease;
+
+            &__image {
+                width: 50vw;
+                height: 25vw;
+                transition: all .9s ease;
+
+                &--hidden {
+                    transform: rotateX(180deg);
+                }
+            }
+        }
+    }
+}
