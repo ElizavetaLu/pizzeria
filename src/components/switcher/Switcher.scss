@@ -1,0 +1,55 @@
+@import "../../variables";
+
+.switcher {
+    position: relative;
+    width: 90px;
+    height: 45px;
+
+    &__input,
+    &__label {
+        position: absolute;
+        z-index: 1;
+
+        cursor: pointer;
+    }
+
+    &__input {
+        opacity: 0;
+    }
+
+    &__label {
+        transition: background-color .2s ease-in-out;
+        width: 80px;
+        height: 40px;
+        border-radius: 50px;
+        text-align: center;
+        background-color: $bg_color__light;
+        box-shadow: -4px 4px 15px inset rgba(67, 67, 67, 0.4);
+    }
+
+    &__circle {
+        position: absolute;
+        bottom: 36.5px;
+        left: 4px;
+    }
+
+    &__circle::after { 
+        content: ""; 
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-color: rgb(255, 247, 178);
+        transition: transform .2s, background-color .2s;
+        box-shadow: -3px 3px 8px rgba(67, 67, 67, 0.4);
+    }
+
+    &__input:checked~&__label {
+        background-color: $bg_color__dark;
+
+        .switcher__circle::after { 
+            transform: translate3d(40px, 0, 0);
+            background-color: $main_text_color__dark;  
+        }
+    }
+}

@@ -1,13 +1,15 @@
 $main_text_color__light: #333;
-$bg_color__light: #FAF1E6;
+$bg_color__light: #fffcf9;
 $primary_color__light: #064420;
 $secondary_color__light: #E4EFE7;
 $tertiary_color__light: #FDFAF6;
 
+
+
 $main_text_color__dark: #fffcfc;
 $bg_color__dark: #333;
-$primary_color__dark: #A23131;
-$secondary_color__dark: #A1DD70;
+$primary_color__dark: #A1DD70;
+$secondary_color__dark: #A23131;
 $tertiary_color__dark: #E8ECD6;
 
 @mixin flex_center() {
@@ -23,31 +25,52 @@ $tertiary_color__dark: #E8ECD6;
     padding: 0 40px;
 }
 
+@mixin button($bg-color, $color) {
+    cursor: pointer;
+    background-color: $bg-color;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: $color;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: all .2s ease-out;
+}
 
 
+
+
+// adds dots and place pizza names around the circle 
 @mixin on-circle($item-count, $circle-size, $item-size) {
-    position: relative;
+    @include flex-center;
+    position: absolute;
     width: $circle-size;
     height: $circle-size;
     border-radius: 50%;
+    margin: 160px auto 0;
+    border: solid 1.5px $default-color;
 
     &__dot {
+        cursor: pointer;
         position: absolute;
         top: 50%;
         left: 50%;
-        width: $item-size;
-        height: $item-size;
+        width: 10px;
+        height: 10px;
         margin: -4px;
+        border-radius: 50%;
+        background-color: $default-color;
+        transition: background-color .2s ease;
+        @include flex-center;
 
         $angle: (
-            360 / $item-count
+            calc(360 / $item-count)
         );
     $rot: 0;
 
     @for $i from 1 through $item-count {
         &:nth-of-type(#{$i}) {
             transform:
-                rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+                rotate($rot * 1deg) translate(calc($circle-size / 2)) rotate($rot * -1deg);
         }
 
         $rot: $rot + $angle;
@@ -55,15 +78,22 @@ $tertiary_color__dark: #E8ECD6;
 }
 
 &__dot-item {
+    font-size: 18px;
+    text-transform: capitalize;
+    position: absolute;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color .2s ease;
+
     $angle: (
-        360 / $item-count
+        calc(360 / $item-count)
     );
 $rot: 0;
 
 @for $i from 1 through $item-count {
     &:nth-of-type(#{$i}) {
         transform:
-            rotate($rot * 1deg) translate($circle-size / 2 + 3) rotate(90deg);
+            rotate($rot * 1deg) translate(calc($circle-size / 2) (+35)) rotate(90deg);
     }
 
     $rot: $rot + $angle;

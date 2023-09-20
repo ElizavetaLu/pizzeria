@@ -1,0 +1,98 @@
+@import "../../../../variables";
+
+.size {
+    &__title {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 10px;
+
+        &--dark {}
+    }
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+        border: 1px solid $main_text_color__light;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @include flex-center;
+
+        &--dark {
+            border-color: $main_text_color__dark;
+        }
+
+        &:hover,
+        &--active {
+            background-color: $main_text_color__light;
+        }
+
+        &--dark:hover,
+        &--active {
+            background-color: $main_text_color__dark;
+            border-color: $main_text_color__dark;
+        }
+
+        &:hover>.size__prompt {
+            display: block;
+        }
+
+        &:hover>.size__item-text,
+        .size__item-text--active {
+            color: $main_text_color__dark;
+        }
+
+        &--dark:hover>.size__item-text,
+        .size__item-text--active {
+            color: #000;
+        }
+    }
+
+    &__item,
+    &__item-text {
+        transition: all .2s ease;
+    }
+
+    &__item-text {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+
+        &--dark {
+            color: $main_text_color__dark;
+        }
+    }
+
+    &__prompt {
+        display: none;
+        position: absolute;
+        width: 90px;
+        top: -55px;
+        background-color: $bg_color__light;
+        border: 1px solid $secondary_color__light;
+        border-radius: 14px;
+        padding: 10px 20px;
+        box-shadow: 1px 1px 4px #cecece78;
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: -10px;
+            left: 40%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent; 
+            border-top: 10px solid $bg_color__light;
+        }
+    }
+}
