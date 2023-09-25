@@ -1,0 +1,92 @@
+@import "../../../variables";
+
+$max-width: 250px;
+
+.card {
+    position: relative;
+    max-width: calc($max-width + 20px);
+    background-color: $bg_color__light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #7878783e;
+    
+    &--dark {
+        background-color: $bg_color__dark;
+    }
+
+    &__new {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &--dark {}
+    }
+
+    &__image {
+        margin-top: 20px;
+        width: 100%;
+        max-width: $max-width;
+        box-shadow: 5px 20px 30px #6a6a6ab8; 
+        border-radius: 100%;
+
+        &--dark {
+            box-shadow: 5px 20px 40px $main_text_color__dark;
+        }
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__name-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__name {
+        white-space: nowrap;
+        max-width: calc($max-width - 50px);
+        text-overflow: ellipsis;
+        font-size: 18px;
+        font-weight: 500;
+
+        &--dark {
+            color: $main_text_color__dark;
+        }
+    }
+
+    &__add {
+        cursor: pointer;
+
+        &--dark {}
+    }
+
+    &__add-icon {
+        width: 26px;
+    }
+
+    &__price {
+        font-size: 24px;
+        font-weight: 500;
+
+        &--dark {
+            color: $main_text_color__dark;
+        }
+    }
+
+    &__ingredients {
+        max-width: $max-width;
+        color: #868686;
+
+        &--dark {
+            color: $main_text_color__dark;
+        }
+    }
+}

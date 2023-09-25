@@ -12,6 +12,8 @@ $primary_color__dark: #A1DD70;
 $secondary_color__dark: #A23131;
 $tertiary_color__dark: #E8ECD6;
 
+$margin_between_sections: 120px;
+
 @mixin flex_center() {
     display: flex;
     justify-content: center;
@@ -86,14 +88,15 @@ $tertiary_color__dark: #E8ECD6;
     transition: color .2s ease;
 
     $angle: (
-        calc(360 / $item-count)
+        calc(360 / $item-count )
     );
 $rot: 0;
 
 @for $i from 1 through $item-count {
+
     &:nth-of-type(#{$i}) {
         transform:
-            rotate($rot * 1deg) translate(calc($circle-size / 2) (+35)) rotate(90deg);
+            rotate($rot * 1deg) translate($circle-size / 2 +35) rotate(90deg);
     }
 
     $rot: $rot + $angle;

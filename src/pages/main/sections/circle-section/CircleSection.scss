@@ -65,6 +65,20 @@ $active-item: #ff7919;
             }
         }
 
+        &__button {
+            position: absolute;
+            @include button(#000000c7, $main_text_color__dark);
+            top: 35%;
+
+            &:hover {
+                background-color: #000;
+            }
+
+            &:active {
+                transform: translateY(1px);
+            }
+        }
+
         .additional-circle {
             position: relative;
             @include flex-center;
@@ -88,21 +102,7 @@ $active-item: #ff7919;
                 &--hidden {
                     transform: rotateX(180deg);
                 }
-            }
-
-            &__button {
-                position: absolute;
-                @include button(#000000c7, $main_text_color__dark);
-                top: 30%;
-
-                &:hover {
-                    background-color: #000;
-                }
-
-                &:active {
-                    transform: translateY(1px);
-                }
-            }
+            } 
         }
     }
 }

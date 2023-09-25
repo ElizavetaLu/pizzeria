@@ -13,6 +13,7 @@ export default function Main() {
       <NewPizza />
       <BookTable />
       <Menu />
+      <div className="main__section-separator"></div>
       <About />
     </main>
   )

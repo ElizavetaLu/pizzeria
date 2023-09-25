@@ -1,0 +1,108 @@
+@import "../../../../variables";
+
+.book-table {
+    margin-top: $margin_between_sections;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    &__booking {
+        background-image: url('../../../../../public/images/sections-images/booking-bg.png');
+        background-size: cover;
+        opacity: 0.89;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    &__prescription {
+        color: $main_text_color__dark;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+
+        &--dark {
+            color: $main_text_color__dark;
+        }
+    }
+
+    &__separator {
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__separator-line {
+        display: inline-block;
+        width: 70px;
+        height: 2px;
+
+        &:nth-child(1) {
+            background-color: green;
+        }
+
+        &:nth-child(2) {
+            background-color: white;
+        }
+
+        &:nth-child(3) {
+            background-color: red;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        color: $main_text_color__dark;
+        text-transform: capitalize;
+
+        &--dark {
+            color: $main_text_color__dark;
+        }
+    }
+
+    &__working-hours {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    &__time {
+        color: $main_text_color__dark;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__button {
+        cursor: pointer;
+        color: $main_text_color__dark;
+        border: 1px solid $main_text_color__dark;
+        padding: 12px 20px;
+        text-transform: uppercase;
+        transition: all .2s ease-out;
+
+        &--dark {
+            color: $main_text_color__dark;
+            border-color: $bg_color__light;
+        }
+
+        &:hover {
+            background-color: $tertiary_color__light;
+            color: $main_text_color__light;
+        }
+    }
+
+    &__image {
+        margin-top: 50px;
+        background-image: url('../../../../../public/images/sections-images/book-table-img.jpg');
+        background-size: cover;
+        width: 40%;
+        height: 400px;
+    }
+}
