@@ -111,6 +111,7 @@ export default function CircleSection() {
 
     const { isDark } = useSelector((state: any) => state.theme)
     // const isDark = true
+
     const [currentId, setCurrentId] = useState<number>(11)
 
     const [current] = useState<string>('pizza-3')
@@ -168,8 +169,8 @@ export default function CircleSection() {
                         alt=""
                     />
 
-                    <button className="additional-circle__button">order now</button>
                 </div>
+                    <button className="main-circle__button">order now</button>
             </div >
         </section >
     )

@@ -1,0 +1,14 @@
+@import "../../../../variables";
+
+.new-pizza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $margin_between_sections; 
+
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        gap: 20px;
+    }
+}

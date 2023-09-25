@@ -1,0 +1,21 @@
+@import "../../../../../../variables";
+
+.pizza-smcell {
+    margin-bottom: 20px;
+    &__name,&__ingredients{
+        &--dark{
+            color: $main_text_color__dark;
+        }
+    }
+    &__name {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+
+    &__ingredients {
+        font-size: 16px;
+        opacity: 0.8;
+        width: 90%;
+    }
+}

@@ -1,0 +1,10 @@
+@import "../../variables";
+
+.title {
+    font-size: 32px;
+    text-align: center;
+
+    &--dark {
+        color: $main_text_color__dark;
+    }
+}
