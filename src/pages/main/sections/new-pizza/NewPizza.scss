@@ -1,14 +1,39 @@
 @import "../../../../variables";
 
 .new-pizza {
+    @include container;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: $margin_between_sections; 
+    margin-top: $margin_between_sections;
 
     &__list {
         margin-top: 60px;
         display: flex;
         gap: 20px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .new-pizza {
+        &__list {
+            flex-direction: column;
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .new-pizza {
+        padding: $container_padding-mobile;
+        margin-top: $margin_between_sections-mobile
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .new-pizza {
+        &__list { 
+            width: 100%;
+        }
     }
 }

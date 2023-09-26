@@ -65,10 +65,16 @@ $active-item: #ff7919;
             }
         }
 
-        &__button {
+        &__buttons {
             position: absolute;
-            @include button(#000000c7, $main_text_color__dark);
             top: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__button {
+            @include button(#000000c7, $main_text_color__dark);
 
             &:hover {
                 background-color: #000;
@@ -102,7 +108,7 @@ $active-item: #ff7919;
                 &--hidden {
                     transform: rotateX(180deg);
                 }
-            } 
+            }
         }
     }
 }
@@ -110,26 +116,26 @@ $active-item: #ff7919;
 @media screen and (max-width: 1130px) {
     .circle-section {
         height: 650px;
+
         .main-circle {
             @include on-circle($item-count: 20, $circle-size: 780px, $item-size: 10px);
         }
-    }  
+    }
 }
 
 @media screen and (max-width: 900px) {
     .circle-section {
         padding-top: 100px;
         height: 540px;
+
         .main-circle {
             @include on-circle($item-count: 20, $circle-size: 610px, $item-size: 10px);
-       
+
             .additional-circle {
                 border: none;
             }
         }
-    }  
+    }
 }
 
-@media screen and (max-width: 700px) {
-
-}
+@media screen and (max-width: 700px) {}

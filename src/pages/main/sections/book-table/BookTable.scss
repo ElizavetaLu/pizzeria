@@ -7,53 +7,27 @@
     gap: 20px;
 
     &__booking {
+        padding: 40px;
         background-image: url('../../../../../public/images/sections-images/booking-bg.png');
         background-size: cover;
         opacity: 0.89;
         width: 40%;
-        display: flex;
+        @include flex-center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        gap: 30px;
         margin-bottom: 50px;
     }
 
     &__prescription {
-        color: $main_text_color__dark;
-        text-transform: capitalize;
-        margin-bottom: 20px;
+        @include gold_text;
 
         &--dark {
             color: $main_text_color__dark;
-        }
-    }
-
-    &__separator {
-        margin: 30px 0;
-        display: flex;
-        align-items: center;
-    }
-
-    &__separator-line {
-        display: inline-block;
-        width: 70px;
-        height: 2px;
-
-        &:nth-child(1) {
-            background-color: green;
-        }
-
-        &:nth-child(2) {
-            background-color: white;
-        }
-
-        &:nth-child(3) {
-            background-color: red;
         }
     }
 
     &__title {
-        font-size: 30px;
+        font-size: 34px;
         color: $main_text_color__dark;
         text-transform: capitalize;
 
@@ -62,19 +36,8 @@
         }
     }
 
-    &__working-hours {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 50px;
-    }
-
-    &__time {
-        color: $main_text_color__dark;
-    }
-
     &__buttons {
+        margin-top: 50px;
         display: flex;
         gap: 20px;
     }
@@ -103,6 +66,18 @@
         background-image: url('../../../../../public/images/sections-images/book-table-img.jpg');
         background-size: cover;
         width: 40%;
-        height: 400px;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .book-table {
+        margin-top: $margin_between_sections-mobile;
+        &__booking {
+            width: 100%;
+        }
+        &__image {
+            display: none;
+        }
     }
 }

@@ -1,5 +1,66 @@
 @import "../../../../variables";
 
-.about-section {
-    margin-top: $margin_between_sections;
+.about-container {
+    @include container;
+
+    .about-section {
+        margin-top: $margin_between_sections;
+
+        &__block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: $margin_between_sections;
+            width: 90%;
+
+            &--space {
+                margin-top: 40px;
+            }
+        }
+
+        .images {
+            width: 60%;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+
+            &--bottom {
+                width: 40%;
+            }
+
+            &__image {
+                height: 250px;
+                position: absolute;
+                z-index: 1;
+
+                &--left {
+                    bottom: -50px;
+                    left: 25%;
+                }
+
+                &--right {
+                    bottom: -50px;
+                    right: -25%;
+                }
+            }
+
+            &__image-vertical {
+                height: 450px;
+            }
+        }
+
+        &__block-reverse {
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .about-container {
+        padding: $container_padding-mobile; 
+    }
 }

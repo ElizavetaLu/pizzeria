@@ -1,9 +1,8 @@
-import { useSelector } from 'react-redux'
-import { navigation } from '../../data'
+import { useEffect, useState } from 'react' 
+import { useSelector } from 'react-redux' 
+import Navigation from '../navigation/Navigation'
 import Logo from '../logo/Logo'
 import './Header.scss'
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 
 const defaultOffset = 200;
@@ -39,21 +38,8 @@ export default function Header() {
             <header className="header">
                 <Logo />
                 <nav className="header__nav">
-                    <ul className="header__nav-list">
-                        {
-                            navigation.map(item => {
-                                return (
-                                    <Link
-                                        to={item.title}
-                                        key={item.title}
-                                        className={`header__nav-item ${isDark && 'header__nav-item--dark'}`}
-                                    >
-                                        {item.title}
-                                    </Link>
-                                )
-                            })
-                        }
-                    </ul>
+                    <Navigation />
+
                     {/* <Switcher /> */}
                     <button className={`header__button ${isDark && 'header__button--dark'}`}>order online</button>
 

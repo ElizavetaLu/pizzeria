@@ -442,4 +442,79 @@ export const pizza = [
             },
         ]
     },
+    {
+        _id: 17,
+        isNew: false,
+        name: 'Mortadellatsa',
+        image: 'pizza.png',
+        ingredients: ['Artichoke cream', 'Mozzarella Fior di Latte', 'mortadella', 'stracciatella', 'homemade pistachio pesto', 'pistachios'],
+        price: 13,
+        sizes: [
+            {
+                size: 'small',
+                sizeLetter: 's',
+                length: '23cm'
+            },
+            {
+                size: 'medium',
+                sizeLetter: 'l',
+                length: '33cm',
+            },
+            {
+                size: 'lage',
+                sizeLetter: 'm',
+                length: '43cm'
+            },
+        ]
+    },
+    {
+        _id: 18,
+        isNew: false,
+        name: 'Bresoala',
+        image: 'pizza.png',
+        ingredients: ['Fior di latte mozzarella', 'goat cheese', 'honey', 'bresaola and pine nuts'],
+        price: 13,
+        sizes: [
+            {
+                size: 'small',
+                sizeLetter: 's',
+                length: '23cm'
+            },
+            {
+                size: 'medium',
+                sizeLetter: 'l',
+                length: '33cm',
+            },
+            {
+                size: 'lage',
+                sizeLetter: 'm',
+                length: '43cm'
+            },
+        ]
+    },
+    {
+        _id: 19,
+        isNew: false,
+        name: 'Al salmone',
+        image: 'pizza.png',
+        ingredients: ['Fior di latte mozzarella', 'arugula', 'smoked salmon', 'stracciatella', 'lemon zest', 'cherry tomatoes', 'anete'],
+        price: 13,
+        sizes: [
+            {
+                size: 'small',
+                sizeLetter: 's',
+                length: '23cm'
+            },
+            {
+                size: 'medium',
+                sizeLetter: 'l',
+                length: '33cm',
+            },
+            {
+                size: 'lage',
+                sizeLetter: 'm',
+                length: '43cm'
+            },
+        ]
+    },
 ]

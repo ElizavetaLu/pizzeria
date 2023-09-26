@@ -1,3 +1,108 @@
-.footer{
+@import "../../variables";
+
+.footer-container {
     margin-top: auto;
+    padding: 40px 0;
+    background-image: url('../../../public/images/background/footer.png');
+    background-size: cover;
+
+    .footer {
+        @include container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        &__logo {
+            text-transform: uppercase;
+            color: $main_text_color__dark;
+            font-size: 32px;
+        }
+
+        &__title,
+        &__time,
+        &__item-text {
+            color: $main_text_color__dark;
+        }
+
+        &__opening-hours {
+            @include flex-center;
+            background-color: #fffcfc3e;
+            padding: 20px 30px;
+        }
+
+        &__contacts {
+            margin: 10px 0 40px;
+        }
+
+        &__contacts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        &__list-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &__item-icon {
+            width: 24px;
+        }
+
+        &__button {
+            cursor: pointer;
+            margin: 30px 0;
+            width: 100%;
+            padding: 15px;
+            border-top: 1px solid #B68D40;
+            border-bottom: 1px solid #B68D40;
+            color: #B68D40;
+            text-transform: uppercase;
+            font-size: 18px;
+            transition: all .2s ease;
+
+            &:hover {
+                border-color: #D6AD60;
+                color: #D6AD60;
+            }
+        }
+
+        &__socials {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__rights {
+            color: #fffcfc75;
+            font-size: 14px;
+        }
+
+        &__list {
+            display: flex;
+            gap: 10px;
+        }
+
+        &__social-icon {
+            cursor: pointer;
+            width: 30px;
+            filter: sepia(100%);
+            transition: all .2s ease-out;
+
+            &:hover {
+                filter: sepia(0%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .footer-container {
+        .footer {
+            padding: $container_padding-mobile;
+        }
+    }
 }
