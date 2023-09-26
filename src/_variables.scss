@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 $main_text_color__light: #333;
 $bg_color__light: #fffcf9;
 $primary_color__light: #064420;
@@ -8,11 +10,24 @@ $tertiary_color__light: #FDFAF6;
 
 $main_text_color__dark: #fffcfc;
 $bg_color__dark: #333;
-$primary_color__dark: #A1DD70;
+$primary_color__dark: #51b500;
 $secondary_color__dark: #A23131;
 $tertiary_color__dark: #E8ECD6;
 
+
+$green: #00983d;
+$red: #da132a;
+$gold: #B68D40;
+
 $margin_between_sections: 120px;
+$margin_between_sections-mobile: 80px;
+
+@mixin gold_text() {
+    font-family: 'Dancing Script', cursive;
+    color: $gold;
+    text-transform: capitalize;
+    font-size: 20px;
+}
 
 @mixin flex_center() {
     display: flex;
@@ -26,6 +41,8 @@ $margin_between_sections: 120px;
     margin: 0 auto;
     padding: 0 40px;
 }
+
+$container_padding-mobile: 0 16px;
 
 @mixin button($bg-color, $color) {
     cursor: pointer;

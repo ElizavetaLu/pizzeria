@@ -1,0 +1,40 @@
+@import "../../variables";
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-bottom: 1px solid transparent;
+
+        &--light {
+            color: $main_text_color__dark;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            height: 1px;
+            transition: padding-left .2s ease-in-out;
+        }
+
+        &:hover::after {
+            background-color: $main_text_color__light;
+            padding-left: 100%;
+        }
+
+        &--light:hover {
+            &::after {
+                background-color: $main_text_color__dark;
+                padding-left: 100%;
+            }
+        }
+    }
+}

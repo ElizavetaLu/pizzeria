@@ -1,0 +1,73 @@
+@import "../../../../variables";
+
+.signboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__threads {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__thread {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__thread-line {
+        width: 1.5px;
+        height: 80px;
+        background-color: $main_text_color__light;
+    }
+
+    &__thread-icon {
+        width: 20px;
+        margin-top: -10px;
+        z-index: 1;
+    }
+
+    &__board {
+        margin-top: -7px;
+        display: flex;
+        width: 60%;
+        border-radius: 50px;
+        box-shadow: 3px 2px 8px #4f4f4f38;
+    }
+
+    &__logo {
+        background-color: $green;
+        color: $main_text_color__dark;
+        font-size: 27px;
+        text-transform: uppercase;
+        padding: 20px 30px;
+        border-radius: 50px 0 0 50px;
+        width: 30%;
+        text-align: center;
+    }
+
+    &__search {
+        background-color: $tertiary_color__light;
+        width: 40%;
+        padding: 20px 40px;
+        font-size: 20px;
+    }
+
+    &__order {
+        background-color: $red;
+        border-radius: 0 50px 50px 0;
+        @include flex-center;
+        width: 30%;
+    }
+
+    &__button {
+        cursor: pointer;
+        background-color: #fffcf96f;
+        color: $main_text_color__dark;
+        text-transform: uppercase;
+        padding: 15px 25px;
+        border-radius: 50px;
+    }
+}
