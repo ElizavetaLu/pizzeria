@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux"
+import { TNameAndIngredients } from "../../../../../../types"
 import "./PizzaCell.scss"
 
-export default function PizzaCell({ name, ingredients }: { name: string, ingredients: string[] }) {
+export default function PizzaCell({ name, ingredients }: TNameAndIngredients) {
 
     const { isDark } = useSelector((state: any) => state.theme)
 

@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.menu-container {
+    margin-bottom: $margin_between_sections;
+
+    &__image-section {
+        height: 480px;
+        background-image: url("../../../public/images/sections-images/book-table-img.jpg");
+        background-size: cover
+    }
+
+    .menu {
+        @include container;
+    }
+}

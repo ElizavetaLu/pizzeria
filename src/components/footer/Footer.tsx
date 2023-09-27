@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import OpeningHours from "../opening-hours/OpeningHours"
 import Navigation from "../navigation/Navigation"
-import "./Footer.scss"
 import Flag from "../flag/Flag"
+import "./Footer.scss"
 
 
 export default function Footer() {
@@ -12,9 +13,9 @@ export default function Footer() {
   return (
     <footer className="footer-container">
       <div className="footer">
-        <span className="footer__logo">virgolini</span>
+        <Link to="/" className="footer__logo">virgolini</Link>
 
-        <Flag/>
+        <Flag />
 
         <Navigation light />
 
@@ -41,8 +42,8 @@ export default function Footer() {
                 <span className="footer__item-text">infovirgolini@gmail.com</span>
               </li>
             </ul>
-          </div> 
-          
+          </div>
+
           <div className="footer__socials">
             <p className="footer__rights">All rights reserved 2023.</p>
             <ul className="footer__list">

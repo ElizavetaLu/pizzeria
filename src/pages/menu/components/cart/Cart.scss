@@ -1,0 +1,107 @@
+@import "../../../../variables";
+
+.cart-button {
+    position: sticky;
+    right: 0;
+    top: 90px;
+    cursor: pointer;
+    margin-right: -35px;
+
+    &__icon {
+        width: 40px;
+        transition: all .2s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &--move {
+        display: none;
+    }
+
+    &__circle {
+        position: absolute;
+        right: -7px;
+        top: -3px;
+        width: 20px;
+        height: 20px;
+        @include flex-center;
+        border-radius: 100%;
+        color: $bg_color__light;
+        background-color: $red;
+    }
+}
+
+.main-cart {
+    position: sticky;
+    right: 0;
+    top: 50px;
+    width: 50%;
+    padding: 30px 20px 20px;
+    background-color: $tertiary_color__light;
+    box-shadow: 3px 3px 8px #4b4b4b25;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all .4s linear;
+
+    &--hidden {
+        width: 0;
+        padding: 0px;
+    }
+
+    &--hidden>&__title {
+        font-size: 10px;
+    }
+
+    &__hide-button {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
+
+    &__hide-icon {
+        width: 30px;
+        transition: all .2s ease;
+
+        &:hover {
+            transform: translateX(4px);
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        transition: all .4s ease;
+    }
+
+    &__list {
+        margin: 20px 0 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__dummy {
+        color: #7b7b7b;
+        font-size: 16px;
+    }
+
+    &__button {
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 17px;
+        width: 100%;
+        padding: 15px;
+        border-top: 1px solid $main_text_color__light;
+        border-bottom: 1px solid $main_text_color__light;
+        transition: all .2s ease-out;
+
+        &:hover {
+            background-color: $main_text_color__light;
+            color: $bg_color__light;
+        }
+    }
+}

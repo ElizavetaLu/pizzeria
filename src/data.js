@@ -24,19 +24,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'garlic', 'oregano and olive oil'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -49,19 +53,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'Mozzarella fior di latte', 'basil and olive oil'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -74,19 +82,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'Mozzarella di bufala and olive oil'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -99,19 +111,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'Mozzarella fior di latte', 'basil and olive oil'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -124,19 +140,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'fior di latte mozzarella', 'capers', 'anchovies and olives'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -149,19 +169,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'Mozzarella fior di latte', 'Gorgonzola', 'Scamorza and goat cheese'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -174,19 +198,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'fior di latte mozzarella', 'mushrooms and cooked ham'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -199,19 +227,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'fior di latte mozzarella', 'mushrooms', 'cooked ham', 'artichokes and olives'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -224,19 +256,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'fior di latte mozzarella', 'mushrooms and cooked ham'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -249,19 +285,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'Mozzarella fior di latte', 'zucchini', 'eggplant', 'mushrooms and artichokes', 'olives'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -274,19 +314,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'mozzarella fior di latte', 'arugula', 'San Daniele ham', 'basil pesto', 'parmesan shavings', 'cherry tomato'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -299,19 +343,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'fior di latte mozzarella', 'spicy salami', 'grilled peppers', 'nduja cream'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -324,19 +372,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Beetroot cream', 'fior di latte mozzarella', 'stracciatella', 'bresaola', 'parmesan shavings', 'oven-roasted cherry tomatoes'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -349,19 +401,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Organic tomato sauce', 'fior di latte mozzarella', 'tuna fillets', 'red onions', 'olives'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -374,19 +430,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Artichoke cream', 'Mozzarella Fior di Latte', 'mortadella', 'stracciatella', 'homemade pistachio pesto', 'pistachios'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -399,19 +459,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Fior di latte mozzarella', 'goat cheese', 'honey', 'bresaola and pine nuts'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -424,19 +488,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Fior di latte mozzarella', 'arugula', 'smoked salmon', 'stracciatella', 'lemon zest', 'cherry tomatoes', 'anete'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -449,19 +517,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Artichoke cream', 'Mozzarella Fior di Latte', 'mortadella', 'stracciatella', 'homemade pistachio pesto', 'pistachios'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -474,19 +546,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Fior di latte mozzarella', 'goat cheese', 'honey', 'bresaola and pine nuts'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
@@ -499,19 +575,23 @@ export const pizza = [
         image: 'pizza.png',
         ingredients: ['Fior di latte mozzarella', 'arugula', 'smoked salmon', 'stracciatella', 'lemon zest', 'cherry tomatoes', 'anete'],
         price: 13,
+        weight: 982,
         sizes: [
             {
                 size: 'small',
+                price: 11,
                 sizeLetter: 's',
                 length: '23cm'
             },
             {
                 size: 'medium',
+                price: 14,
                 sizeLetter: 'l',
                 length: '33cm',
             },
             {
                 size: 'lage',
+                price: 17,
                 sizeLetter: 'm',
                 length: '43cm'
             },
