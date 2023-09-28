@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import { TPizzaCard } from "../../../types"
 import "./PizzaCard.scss"
 
-export default function PizzaCard({ _id, isNew, name, image, ingredients, price, sizes }: TPizzaCard) {
+export default function PizzaCard({ _id, isNew, name, image, ingredients, price }: TPizzaCard) {
 
     const { isDark } = useSelector((state: any) => state.theme)
 

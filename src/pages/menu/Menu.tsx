@@ -8,7 +8,8 @@ export default function Menu() {
     return (
         <div className="menu-container">
             <section className="menu-container__image-section">
-                <h1>some text</h1>
+                <h1 className="menu-container__title">some text</h1>
+                <button className="menu-container__button">view our menu</button>
             </section>
 
             <main className="menu">
