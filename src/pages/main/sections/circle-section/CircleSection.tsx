@@ -27,7 +27,7 @@ export default function CircleSection() {
     return (
         <section className={`circle-section ${isDark && 'circle-section--dark'}`}>
 
-            <SelectSize />
+            {/* <SelectSize /> */}
 
             <div className={`main-circle ${isDark && 'main-circle--dark'}`}>
                 {

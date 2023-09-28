@@ -19,5 +19,6 @@ export type TPizzaCard = {
 
 export type TNameAndIngredients = {
     name: string,
+    isNew: boolean,
     ingredients: string[],
 }
