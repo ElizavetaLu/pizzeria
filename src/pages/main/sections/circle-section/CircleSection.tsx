@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import './CircleSection.scss'
 import SelectSize from "../../components/select-size/SelectSize"
 import { pizza } from "../../../../data"
+import { Link } from "react-router-dom"
 
  
 
@@ -72,7 +73,7 @@ export default function CircleSection() {
 
                 <div className="main-circle__buttons">
                     <button className="main-circle__button">order now</button>
-                    <button className="main-circle__button">view all</button>
+                    <Link to="menu" className="main-circle__button">view all</Link>
                 </div>
             </div >
         </section >

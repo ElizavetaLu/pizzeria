@@ -75,6 +75,7 @@ $active-item: #ff7919;
 
         &__button {
             @include button(#000000c7, $main_text_color__dark);
+            text-align: center;
 
             &:hover {
                 background-color: #000;

@@ -9,7 +9,7 @@ export default function NewPizza() {
 
     return (
         <section className='new-pizza'>
-            <SectionTitle priscription="new tastes" title="NEW pizza" />
+            <SectionTitle prescription="new tastes" title="NEW pizza" />
             <div className="new-pizza__list">
                 {
                     newPizzaList.map(item => {

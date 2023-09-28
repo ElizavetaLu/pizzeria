@@ -1,0 +1,59 @@
+@import "../../../../variables";
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $tertiary_color__light;
+    box-shadow: 3px 3px 6px #4b4b4b25;
+    border-radius: 8px;
+    padding: 10px;
+    width: 35%;
+    overflow: hidden;
+    transition: all .4s linear;
+    height: 250px;
+
+    &--hidden {
+        height: 0px;
+        padding: 0px;
+    }
+
+    &__ingredients {
+        margin-bottom: 20px;
+    }
+
+    &__parameter {
+        font-size: 18px;
+        color: #5a5a5a;
+    }
+
+    &__price-input {
+        width: 80px;
+        border: 1px solid #858585;
+        border-radius: 2px;
+        font-size: 16px;
+        padding: 5px;
+        text-align: center;
+
+        &::placeholder {
+            text-transform: capitalize;
+        }
+    }
+
+    &__price-separator {
+        margin: 0 20px;
+    }
+
+    &__button-container { 
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        cursor: pointer;
+        border: 1px solid $main_text_color__light;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}

@@ -12,7 +12,7 @@ export default function Menu() {
 
     return (
         <div className="menu-section">
-            <SectionTitle priscription="wanna eat something?" title="the menu" />
+            <SectionTitle prescription="wanna eat something?" title="the menu" />
             <div className="menu-section__menu">
                 <Table data={pizza.slice(0, 5)} />
                 <div className={`menu-section__menu-separator ${isDark && 'menu-section__menu-separator--dark'}`}></div>

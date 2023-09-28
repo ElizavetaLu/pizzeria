@@ -1,0 +1,19 @@
+@import "../../../../variables";
+
+.menu-list {
+    background-image: url("../../../../../public/images/background/menu-bg.png");
+    background-size: cover;
+    border-radius: 8px;
+    padding: 20px 30px;
+
+    &__title {
+        font-size: 34px; 
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
