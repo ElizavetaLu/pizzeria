@@ -1,12 +1,23 @@
 @import "../../../../../../variables";
 
 .pizza-smcell {
+   position: relative; 
     margin-bottom: 20px;
-    &__name,&__ingredients{
-        &--dark{
+
+    &__new{
+        position: absolute;
+        top: -15px;
+        left: -24px;
+        width: 30px;
+    }
+
+    &__name,
+    &__ingredients {
+        &--dark {
             color: $main_text_color__dark;
         }
     }
+
     &__name {
         font-size: 22px;
         font-weight: 500;

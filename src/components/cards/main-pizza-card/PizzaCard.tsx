@@ -9,7 +9,7 @@ export default function PizzaCard({ _id, isNew, name, image, ingredients, price 
     return (
         <div className={`card ${isDark && 'card--dark'}`}>
             {
-                isNew && <div className={`card__new ${isDark && 'card__new--dark'}`}>new</div>
+                isNew && <img className="card__new" src="/images/icons/new.png" alt="" />
             }
             <img className={`card__image ${isDark && 'card__image--dark'}`} src={`/images/pizza/${image}`} alt="" />
             <div className="card__data">

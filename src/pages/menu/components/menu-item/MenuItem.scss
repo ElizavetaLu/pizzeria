@@ -1,9 +1,17 @@
 @import "../../../../variables";
 
 .menu-item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &__new {
+        position: absolute;
+        top: -8px;
+        left: -12px;
+        width: 45px;
+    }
 
     &__left,
     &__right,
