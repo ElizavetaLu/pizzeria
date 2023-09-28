@@ -14,8 +14,7 @@ export type TPizzaCard = {
     image: string,
     ingredients: string[],
     price: number,
-    weight: number,
-    sizes: TPizzaSizes[]
+    weight: number
 }
 
 export type TNameAndIngredients = {

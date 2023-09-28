@@ -23,7 +23,7 @@ export default function MenuSearch() {
                 </button>
             </div>
 
-            <Filter isShown={isShown} />
+            <Filter isShown={isShown} setIsShown={setIsShown}/>
         </div>
     )
 }
