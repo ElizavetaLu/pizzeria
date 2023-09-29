@@ -26,7 +26,7 @@
         z-index: 1;
         font-size: 6rem;
         font-weight: 300;
-        color: $bg_color__light;
+        color: $main_light_color;
         text-transform: uppercase;
     }
 
@@ -43,7 +43,7 @@
     &__phone {
         font-size: 30px;
         font-weight: 500;
-        color: $orange;
+        color: $primary;
         margin-bottom: 20px;
         text-align: center;
     }
@@ -52,12 +52,12 @@
         cursor: pointer;
         text-transform: uppercase;
         padding: 15px 30px;
-        background-color: $bg_color__light;
+        background-color: $main_light_color;
         text-align: center;
     }
 
     &__button-book {
-        background-color: $orange;
-        color: $bg_color__light;
+        background-color: $primary;
+        color: $main_light_color;
     }
 }

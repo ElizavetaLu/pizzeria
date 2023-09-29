@@ -5,7 +5,7 @@ $max-width: 250px;
 .card {
     position: relative;
     max-width: calc($max-width + 20px);
-    background-color: $bg_color__light;
+    background-color: $main_light_color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,7 @@ $max-width: 250px;
     box-shadow: 3px 3px 8px #7878783e;
 
     &--dark {
-        background-color: $bg_color__dark;
+        background-color: $main_dark_color;
     }
 
     &__new {
@@ -33,7 +33,7 @@ $max-width: 250px;
         border-radius: 100%;
 
         &--dark {
-            box-shadow: 5px 20px 40px $main_text_color__dark;
+            box-shadow: 5px 20px 40px $main_light_color;
         }
     }
 
@@ -57,7 +57,7 @@ $max-width: 250px;
         font-weight: 500;
 
         &--dark {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
     }
 
@@ -74,7 +74,7 @@ $max-width: 250px;
         font-weight: 500;
 
         &--dark {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
     }
 
@@ -83,7 +83,7 @@ $max-width: 250px;
         color: #868686;
 
         &--dark {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
     }
 }

@@ -20,7 +20,7 @@
     &__thread-line {
         width: 1.5px;
         height: 80px;
-        background-color: $main_text_color__light;
+        background-color: $main_dark_color;
     }
 
     &__thread-icon {
@@ -39,7 +39,7 @@
 
     &__logo {
         background-color: $green;
-        color: $main_text_color__dark;
+        color: $main_light_color;
         font-size: 27px;
         text-transform: uppercase;
         padding: 20px 30px;
@@ -49,7 +49,7 @@
     }
 
     &__search {
-        background-color: $tertiary_color__light;
+        background-color: $tertiary;
         width: 40%;
         padding: 20px 40px;
         font-size: 20px;
@@ -65,7 +65,7 @@
     &__button {
         cursor: pointer;
         background-color: #fffcf96f;
-        color: $main_text_color__dark;
+        color: $main_light_color;
         text-transform: uppercase;
         padding: 15px 25px;
         border-radius: 50px;

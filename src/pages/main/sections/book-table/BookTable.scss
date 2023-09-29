@@ -22,17 +22,17 @@
         @include gold_text;
 
         &--dark {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
     }
 
     &__title {
         font-size: 34px;
-        color: $main_text_color__dark;
+        color: $main_light_color;
         text-transform: capitalize;
 
         &--dark {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
     }
 
@@ -44,20 +44,20 @@
 
     &__button {
         cursor: pointer;
-        color: $main_text_color__dark;
-        border: 1px solid $main_text_color__dark;
+        color: $main_light_color;
+        border: 1px solid $main_light_color;
         padding: 12px 20px;
         text-transform: uppercase;
         transition: all .2s ease-out;
 
         &--dark {
-            color: $main_text_color__dark;
-            border-color: $bg_color__light;
+            color: $main_light_color;
+            border-color: $main_light_color;
         }
 
         &:hover {
-            background-color: $tertiary_color__light;
-            color: $main_text_color__light;
+            background-color: $tertiary;
+            color: $main_dark_color;
         }
     }
 
