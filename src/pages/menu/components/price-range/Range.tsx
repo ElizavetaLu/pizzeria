@@ -40,8 +40,8 @@ export default function Range() {
                 style={{ border: "none", boxShadow: "none", padding: "0" }}
                 ruler={false}
                 label={false}
-                barLeftColor="#E4EFE7"
-                barRightColor="#E4EFE7"
+                barLeftColor="#bdebca"
+                barRightColor="#bdebca"
                 barInnerColor="#8aeaa5"
                 thumbLeftColor=""
                 thumbRightColor=""

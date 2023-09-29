@@ -28,7 +28,7 @@
         height: 20px;
         @include flex-center;
         border-radius: 100%;
-        color: $bg_color__light;
+        color: $main_light_color;
         background-color: $red;
     }
 }
@@ -39,7 +39,7 @@
     top: 50px;
     width: 50%;
     padding: 30px 20px 20px;
-    background-color: $tertiary_color__light;
+    background-color: $tertiary;
     box-shadow: 3px 3px 8px #4b4b4b25;
     border-radius: 8px;
     overflow: hidden;
@@ -95,13 +95,13 @@
         font-size: 17px;
         width: 100%;
         padding: 15px;
-        border-top: 1px solid $main_text_color__light;
-        border-bottom: 1px solid $main_text_color__light;
+        border-top: 1px solid $main_dark_color;
+        border-bottom: 1px solid $main_dark_color;
         transition: all .2s ease-out;
 
         &:hover {
-            background-color: $main_text_color__light;
-            color: $bg_color__light;
+            background-color: $main_dark_color;
+            color: $main_light_color;
         }
     }
 }

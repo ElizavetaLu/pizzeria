@@ -15,14 +15,14 @@
 
         &__logo {
             text-transform: uppercase;
-            color: $main_text_color__dark;
+            color: $main_light_color;
             font-size: 32px;
         }
 
         &__title,
         &__time,
         &__item-text {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
 
         &__opening-hours {

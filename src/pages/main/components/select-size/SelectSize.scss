@@ -8,7 +8,7 @@
         margin-bottom: 10px;
 
         &--dark {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
     }
 
@@ -20,7 +20,7 @@
     &__item {
         position: relative;
         cursor: pointer;
-        border: 1px solid $main_text_color__light;
+        border: 1px solid $main_dark_color;
         padding: 10px;
         width: 40px;
         height: 40px;
@@ -29,16 +29,16 @@
 
         &:hover,
         &--active {
-            background-color: $main_text_color__light;
+            background-color: $main_dark_color;
         }
 
         &:hover>.size__item-text {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
 
         &--dark {
-            background-color: $main_text_color__dark;
-            border-color: $main_text_color__dark;
+            background-color: $main_light_color;
+            border-color: $main_light_color;
         }
     } 
 
@@ -54,11 +54,11 @@
         line-height: 20px;
 
         &--active {
-            color: $main_text_color__dark;
+            color: $main_light_color;
         }
 
         &--dark {
-            color: $bg_color__dark;
+            color: $main_dark_color;
         }
     }
 
@@ -67,8 +67,8 @@
         position: absolute;
         width: 90px;
         top: -55px;
-        background-color: $bg_color__light;
-        border: 1px solid $secondary_color__light;
+        background-color: $main_light_color;
+        border: 1px solid $secondary;
         border-radius: 14px;
         padding: 10px 20px;
         box-shadow: 1px 1px 4px #cecece78;
@@ -83,7 +83,7 @@
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-top: 10px solid $bg_color__light;
+            border-top: 10px solid $main_light_color;
         }
     }
 }

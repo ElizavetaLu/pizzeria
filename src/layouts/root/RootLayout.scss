@@ -4,11 +4,11 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: $bg_color__light;
+    background-color: $main_light_color;
     position: relative;
 
     &--dark {
-        background-color: $bg_color__dark;
+        background-color: $main_dark_color;
     }
 
     .container {

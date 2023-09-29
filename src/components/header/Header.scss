@@ -29,10 +29,10 @@
         } 
 
         &__button {
-            @include button($primary_color__light, #fff);
+            @include button($primary, #fff);
 
             &--dark {
-                background-color: $primary_color__dark;
+                background-color: $primary_dark-theme;
             }
 
             &:hover {

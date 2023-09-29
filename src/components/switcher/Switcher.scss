@@ -23,7 +23,7 @@
         height: 40px;
         border-radius: 50px;
         text-align: center;
-        background-color: $bg_color__light;
+        background-color: $main_light_color;
         box-shadow: -4px 4px 15px inset rgba(67, 67, 67, 0.4);
     }
 
@@ -45,11 +45,11 @@
     }
 
     &__input:checked~&__label {
-        background-color: $bg_color__dark;
+        background-color: $main_dark_color;
 
         .switcher__circle::after { 
             transform: translate3d(40px, 0, 0);
-            background-color: $main_text_color__dark;  
+            background-color: $main_light_color;  
         }
     }
 }

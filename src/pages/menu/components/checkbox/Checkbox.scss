@@ -11,7 +11,7 @@
     user-select: none;
 
     &:hover>&__checkmark {
-        background-color: #ccf0d6;
+        background-color: $select_active ;
     }
 
     &__input {
@@ -22,7 +22,7 @@
         width: 0;
 
         &:checked~.checkbox__checkmark {
-            background-color: $input_item;
+            background-color: $select_active ;
         }
 
         &:checked~.checkbox__checkmark:after {
@@ -43,7 +43,7 @@
         height: 20px;
         width: 20px;
         border-radius: 2px;
-        background-color: $secondary_color__light;
+        background-color: $select_default ;
 
         &:after {
             content: "";
@@ -62,34 +62,3 @@
         }
     }
 }
-
-
-/* Customize the label (the container) */
-.container {}
-
-/* Hide the browser's default checkbox */
-.container input {}
-
-/* Create a custom checkbox */
-.checkmark {}
-
-/* On mouse-over, add a grey background color */
-.container:hover input~.checkmark {
-    // background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked~.checkmark {
-    // background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {}
-
-/* Show the checkmark when checked */
-.container input:checked~.checkmark:after {
-    // display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {}

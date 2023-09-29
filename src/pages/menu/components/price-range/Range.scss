@@ -35,21 +35,21 @@
         cursor: pointer;
         width: 100%;
 
-        &::-webkit-slider-runnable-track {
-            background: $secondary_color__light;
+        &::-webkit-slider-runnable-track { 
             height: 5px;
+            background-color: $select_active;
         }
 
-        &::-moz-range-track {
-            background: $secondary_color__light;
+        &::-moz-range-track { 
             height: 5px;
+            background-color: $select_active;
         }
 
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             margin-top: -6px;
-            background-color: $input_item;
+            background-color: $select_active;
             height: 17px;
             width: 17px;
             border-radius: 100%;
@@ -58,7 +58,7 @@
         &::-moz-range-thumb {
             border: none;
             border-radius: 0;
-            background-color: $input_item;
+            background-color: $select_active;
             height: 17px;
             width: 17px;
             border-radius: 100%;
@@ -71,7 +71,7 @@
         .bar-inner {
             box-shadow: none;
             padding: 2px 0;
-            background-color: $input_item;
+            background-color: $select_active;
             border: none;
         }
 
@@ -87,8 +87,8 @@
 
         .thumb::before {
             box-shadow: none;
-            background-color: $input_item;
-            border: 2px solid $bg_color__light;
+            background-color: $select_active;
+            border: 2px solid $main_light_color;
             width: 15px;
             height: 15px;
             margin: -8px -12px;
