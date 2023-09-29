@@ -90,14 +90,10 @@
     }
 
     &__button {
-        cursor: pointer;
-        text-transform: uppercase;
-        font-size: 17px;
+        @include button(transparent, $main_light_color, 0, transparent, 16px);
         width: 100%;
-        padding: 15px;
         border-top: 1px solid $main_dark_color;
         border-bottom: 1px solid $main_dark_color;
-        transition: all .2s ease-out;
 
         &:hover {
             background-color: $main_dark_color;

@@ -78,12 +78,6 @@
     }
 
     &__button {
-        cursor: pointer;
-        text-transform: uppercase;
-        background-color: $primary;
-        color: $main_light_color;
-        padding: 10px 30px;
-        border-radius: 50px;
-        font-size: 17px;
+        @include button($primary, $main_light_color, 50px, transparent, 16px);
     }
 }

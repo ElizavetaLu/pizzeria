@@ -71,10 +71,6 @@
     }
 
     &__button {
-        cursor: pointer;
-        border: 1px solid $main_dark_color;
-        text-transform: uppercase;
-        padding: 10px 20px;
-        font-size: 15px;
+        @include button(transparent, $main_dark_color, 0, $main_dark_color, 16px);
     }
 }

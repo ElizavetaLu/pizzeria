@@ -11,8 +11,7 @@
     align-items: center;
 
     &__dark-bg {
-        position: absolute;
-
+        position: absolute; 
         top: 0;
         right: 0;
         bottom: 0;
@@ -49,11 +48,7 @@
     }
 
     &__button {
-        cursor: pointer;
-        text-transform: uppercase;
-        padding: 15px 30px;
-        background-color: $main_light_color;
-        text-align: center;
+        @include button($main_light_color, $main_light_color, 0, $secondary, 18px);
     }
 
     &__button-book {

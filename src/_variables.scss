@@ -5,7 +5,7 @@ $main_light_color: #fffcf9;
 
 $primary: #ff7919;
 $secondary: #B68D40;
-$tertiary: #064420;
+$tertiary: #074e24;
 $primary_dark-theme: #ff862f;
 $secondary_dark-theme: #b4904c;
 $tertiary_dark-theme: #08602d;
@@ -13,8 +13,8 @@ $tertiary_dark-theme: #08602d;
 
 
 $green: #00983d;
-$red: #da132a; 
- 
+$red: #da132a;
+
 $select_default: #bdebca;
 $select_active: #8aeaa5;
 
@@ -43,14 +43,17 @@ $margin_between_sections-mobile: 80px;
 
 $container_padding-mobile: 0 16px;
 
-@mixin button($bg-color, $color) {
+
+@mixin button($bg-color, $color, $border-radius, $border-color, $font-size) {
     cursor: pointer;
     background-color: $bg-color;
     padding: 15px 30px;
-    border-radius: 30px;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
     color: $color;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: $font-size;
+    text-align: center;
     transition: all .2s ease-out;
 }
 

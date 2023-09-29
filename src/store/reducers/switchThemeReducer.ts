@@ -1,7 +1,7 @@
 import { SWITCH_THEME } from "../actions/types"
 
 const initialState = {
-    isDark: true
+    isDark: false
 }
 
 const switchThemeReducer = (state = initialState, { type }: { type: string }) => {
