@@ -22,3 +22,15 @@ export type TNameAndIngredients = {
     isNew: boolean,
     ingredients: string[],
 }
+
+
+export interface TLoaction {
+    lat: number,
+    lng: number,
+    id?: string
+}
+
+export interface TMap {
+    currentPizzeria: TLoaction,
+    setCurrentPizzeria: (location: TLoaction) => void
+}

@@ -1,0 +1,14 @@
+@import "../../variables";
+
+.contacts {
+    @include container;
+    margin-top: calc($margin_between_sections + 70px);
+    margin-bottom: $margin_between_sections;
+
+    &__title {
+        font-size: 45px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}

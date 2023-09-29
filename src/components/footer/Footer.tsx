@@ -4,6 +4,7 @@ import OpeningHours from "../opening-hours/OpeningHours"
 import Navigation from "../navigation/Navigation"
 import Flag from "../flag/Flag"
 import "./Footer.scss"
+import Socials from "../socials/Socials"
 
 
 export default function Footer() {
@@ -46,17 +47,7 @@ export default function Footer() {
 
           <div className="footer__socials">
             <p className="footer__rights">All rights reserved 2023.</p>
-            <ul className="footer__list">
-              <li className="footer__social">
-                <img className="footer__social-icon" src="/images/icons/instagram.png" alt="" />
-              </li>
-              <li className="footer__social">
-                <img className="footer__social-icon" src="/images/icons/twitter.png" alt="" />
-              </li>
-              <li className="footer__social">
-                <img className="footer__social-icon" src="/images/icons/facebook.png" alt="" />
-              </li>
-            </ul>
+            <Socials />
           </div>
         </div>
       </div>

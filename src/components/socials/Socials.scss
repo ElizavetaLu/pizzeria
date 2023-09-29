@@ -1,0 +1,15 @@
+.socials {
+    display: flex;
+    gap: 10px;
+
+    &__social-icon {
+        cursor: pointer;
+        width: 30px;
+        filter: sepia(100%);
+        transition: all .2s ease-out;
+
+        &:hover {
+            filter: sepia(0%);
+        }
+    }
+}
