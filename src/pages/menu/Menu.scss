@@ -10,12 +10,14 @@
         @include flex-center;
         flex-direction: column
     }
-&__title{
-    font-size: 40px;
-    text-transform: capitalize;
-}
+
+    &__title {
+        font-size: 40px;
+        text-transform: capitalize;
+    }
+
     &__button {
-        cursor: pointer; 
+        cursor: pointer;
     }
 
     .menu {

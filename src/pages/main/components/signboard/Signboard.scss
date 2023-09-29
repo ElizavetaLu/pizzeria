@@ -63,11 +63,6 @@
     }
 
     &__button {
-        cursor: pointer;
-        background-color: #fffcf96f;
-        color: $main_light_color;
-        text-transform: uppercase;
-        padding: 15px 25px;
-        border-radius: 50px;
+        @include button(#fffcf96f, $main_light_color, 50px, transparent, 16px);
     }
 }

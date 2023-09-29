@@ -1,5 +1,3 @@
-
-
 export type TPizzaSizes = {
     size: string,
     price: number,
@@ -23,14 +21,26 @@ export type TNameAndIngredients = {
     ingredients: string[],
 }
 
+export type TFormInput = {
+    isRequired?: boolean,
+    textarea?: boolean,
+    file?: boolean,
+    title: string
+}
 
-export interface TLoaction {
+export type TPosition = {
+    title: string,
+    image: string,
+    scroll: any
+}
+
+export type TLoaction = {
     lat: number,
     lng: number,
     id?: string
 }
 
-export interface TMap {
+export type TMap = {
     currentPizzeria: TLoaction,
     setCurrentPizzeria: (location: TLoaction) => void
-}
+} 

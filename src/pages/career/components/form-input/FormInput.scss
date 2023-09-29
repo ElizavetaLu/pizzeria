@@ -1,0 +1,38 @@
+@import "../../../../variables";
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+
+    &__title {
+        color: $main_light_color;
+        text-transform: capitalize;
+    }
+
+    &__required {
+        color: $red;
+        padding-left: 2px;
+        font-size: 20px;
+        line-height: 2px;
+    }
+
+    &__field {
+        background-color: $main_light_color;
+        padding: 8px;
+        font-size: 18px;
+        border-radius: 2px;
+
+        &::file-selector-button {
+            cursor: pointer;
+            color: $secondary;
+            background-color: $main_light_color;
+            border: 1px solid $secondary;
+            font-size: 16px;
+            padding: 4px 10px;
+            margin-right: 20px;
+        }
+    }
+
+}

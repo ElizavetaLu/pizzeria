@@ -29,7 +29,7 @@
         } 
 
         &__button {
-            @include button($primary, #fff);
+            @include button($tertiary, #fff, 50px, transparent, 16px);
 
             &--dark {
                 background-color: $primary_dark-theme;

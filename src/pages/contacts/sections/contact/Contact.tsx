@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import Socials from "../../../../components/socials/Socials"
 import "./Contact.scss"
+import { Link } from "react-router-dom"
 
 export default function Contact() {
 
@@ -59,7 +60,7 @@ export default function Contact() {
 
 
             <div className="contact__block">
-                <a href="tel:+39 0873 801409" className="contact__phone">+39 0873 801409</a>
+            <Link to="tel:+39 0873 801409" className="contact__phone">+39 0873 801409</Link>
 
                 <div className="contact__block-data">
                     <span className="contact__block-title">Address</span>

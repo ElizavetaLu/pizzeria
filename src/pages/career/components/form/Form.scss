@@ -1,0 +1,35 @@
+@import "../../../../variables";
+
+.form { 
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    max-width: 45%;
+
+    &__title {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 300;
+        color: $main_light_color;
+        text-transform: uppercase;
+    }
+    
+    &__title-bold {
+        font-weight: 500;
+        color: $primary;
+    }
+
+    &__inputs {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__button{
+        margin-top: 20px;
+        align-self: center;
+        @include button($primary, $main_light_color, 0, transparent, 18px);
+        width: 40%;
+    }
+}

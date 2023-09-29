@@ -1,0 +1,61 @@
+@import "../../variables";
+
+.career {
+    @include container;
+    margin-top: $margin_between_sections;
+
+    &__data {
+        margin-top: 70px;
+        margin-bottom: $margin_between_sections;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__title {
+        min-width: 40%;
+        line-height: 60px;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    &__title-thin {
+        font-weight: 300;
+    }
+
+    &__data-description {
+        padding-top: 5px;
+        font-size: 18px;
+        margin-bottom: 30px;
+        line-height: 27px;
+    }
+
+    &__data-button {
+        @include button($primary, $main_light_color, 0, transparent, 18px)
+    }
+
+    &__positions {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 450px;
+    }
+
+    &__form-container {
+        position: relative;
+        background-image: url('../../../public/images/background/sign-form.jpg');
+        background-size: cover; 
+        padding: 100px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__dark-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgb(0, 0, 0);
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.83) 100%);
+    }
+}
