@@ -1,0 +1,122 @@
+@import "../../../../variables";
+
+.contact {
+    margin: 40px 0 100px;
+    display: flex;
+    gap: 80px;
+
+    &__block {
+        width: 50%;
+    }
+
+    &__block-inputs {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    &__field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__input {
+        border-bottom: 1px solid $main_text_color__light;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        padding: 3px 10px;
+        width: 100%;
+    }
+
+    &__input:not(:placeholder-shown)~&__field-name {
+        bottom: 100%;
+        font-size: 14px;
+        color: $main_text_color__light;
+    }
+
+    &__input:focus~&__field-name {
+        bottom: 100%;
+        font-size: 14px;
+        color: $main_text_color__light;
+    }
+
+    &__field-name {
+        position: absolute;
+        bottom: 3px;
+        transition: all .2s ease;
+        pointer-events: none;
+        color: #828282;
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+    }
+
+    &__button {
+        cursor: pointer;
+        align-self: flex-end;
+        background-color: $gold;
+        color: $bg_color__light;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        border: 1.5px solid $gold;
+        transition: all .2s ease-out;
+
+        &:hover {
+            background-color: transparent;
+            color: $gold;
+        }
+
+        &:active {
+            background-color: $gold;
+            color: $bg_color__light;
+        }
+    }
+
+    &__phone {
+        position: relative;
+        display: inline-block;
+        color: $orange;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 30px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            height: 2px;
+            transition: padding-left .2s ease-in-out;
+        }
+
+        &:hover::after {
+            background-color: $orange;
+            padding-left: 100%;
+        }
+    }
+
+    &__block-data {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        margin-bottom: 20px;
+    }
+
+    &__block-title {
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    &__block-text {
+        color: #828282;
+    }
+}

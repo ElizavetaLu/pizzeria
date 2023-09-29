@@ -1,0 +1,63 @@
+@import "../../../../variables";
+
+.dine {
+    position: relative;
+    width: 100vw;
+    background-image: url('../../../../../public/images/background/dine-with-us.jpg');
+    background-size: cover;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__dark-bg {
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgb(0, 0, 0);
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.29037552521008403) 0%, rgba(0, 0, 0, 0.8253895308123249) 100%);
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        font-size: 6rem;
+        font-weight: 300;
+        color: $bg_color__light;
+        text-transform: uppercase;
+    }
+
+    &__data {
+        position: relative;
+        z-index: 1;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 30%;
+    }
+
+    &__phone {
+        font-size: 30px;
+        font-weight: 500;
+        color: $orange;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__button {
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 15px 30px;
+        background-color: $bg_color__light;
+        text-align: center;
+    }
+
+    &__button-book {
+        background-color: $orange;
+        color: $bg_color__light;
+    }
+}
