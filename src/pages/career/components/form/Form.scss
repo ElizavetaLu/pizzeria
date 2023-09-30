@@ -1,21 +1,22 @@
 @import "../../../../variables";
 
-.form { 
+.form {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 20px;
-    max-width: 45%;
+    max-width: 53%;
 
     &__title {
         text-align: center;
+        margin-bottom: 10px;
         font-size: 3rem;
         font-weight: 300;
         color: $main_light_color;
         text-transform: uppercase;
     }
-    
+
     &__title-bold {
         font-weight: 500;
         color: $primary;
@@ -26,10 +27,32 @@
         gap: 20px;
     }
 
-    &__button{
+    &__button {
         margin-top: 20px;
         align-self: center;
         @include button($primary, $main_light_color, 0, transparent, 18px);
         width: 40%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .form {
+        max-width: 100%;
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__button {
+            @include button-mobile(16px)
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .form {
+        &__inputs {
+            flex-wrap: wrap;
+        }
     }
 }

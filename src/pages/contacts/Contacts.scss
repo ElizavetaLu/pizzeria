@@ -10,5 +10,21 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        &--dark {
+            color: $main_light_color;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contacts {
+        padding: $container_padding-mobile;
+        margin-top: calc($margin_between_sections-mobile + 70px);
+        margin-bottom: $margin_between_sections-mobile;
+
+        &__title {
+            font-size: 35px;
+        }
     }
 }

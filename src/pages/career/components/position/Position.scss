@@ -2,7 +2,8 @@
 
 .position {
     cursor: pointer;
-    width: 220px;
+    width: 100%;
+    max-width: 220px; 
     border-radius: 100px 100px 0 0;
     padding: 80px 10px 0;
     transition: all .4s linear;
@@ -36,5 +37,66 @@
     &:hover {
         height: 450px;
         box-shadow: inset 0 5rem 6rem #000;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .position { 
+        padding: 50px 10px 0;
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &:first-child { 
+            height: 350px;
+        }
+    
+        &:nth-child(2) {
+            height: 250px;
+        }
+    
+        &:nth-child(3) { 
+            height: 380px;
+        }
+    
+        &:last-child {
+            height: 270px;
+        }
+
+        &:hover {
+            height: 400px; 
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .position { 
+        padding: 50px 10px 0;
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &:first-child { 
+            height: 230px;
+        }
+    
+        &:nth-child(2) {
+            height: 130px;
+        }
+    
+        &:nth-child(3) { 
+            height: 260px;
+        }
+    
+        &:last-child {
+            height: 150px;
+        }
+
+        &:hover {
+            height: 280px; 
+        }
     }
 }

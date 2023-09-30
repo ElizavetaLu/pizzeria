@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 import Socials from "../../../../components/socials/Socials"
 import "./Contact.scss"
-import { Link } from "react-router-dom"
+
 
 export default function Contact() {
 
@@ -20,7 +21,7 @@ export default function Contact() {
                             required
                             placeholder=""
                         />
-                        <label className="contact__field-name" htmlFor="name">
+                        <label className={`contact__field-name ${isDark && 'contact__field-name--dark'}`} htmlFor="name">
                             Name
                         </label>
                     </div>
@@ -33,7 +34,7 @@ export default function Contact() {
                             required
                             placeholder=""
                         />
-                        <label className="contact__field-name" htmlFor="email">
+                        <label className={`contact__field-name ${isDark && 'contact__field-name--dark'}`} htmlFor="email">
                             Email address
                         </label>
                     </div>
@@ -49,7 +50,7 @@ export default function Contact() {
                         placeholder=""
                     >
                     </textarea>
-                    <label className="contact__field-name" htmlFor="message">
+                    <label className={`contact__field-name ${isDark && 'contact__field-name--dark'}`} htmlFor="message">
                         Message
                     </label>
                 </div>
@@ -60,21 +61,21 @@ export default function Contact() {
 
 
             <div className="contact__block">
-            <Link to="tel:+39 0873 801409" className="contact__phone">+39 0873 801409</Link>
+                <Link to="tel:+39 0873 801409" className={`contact__phone ${isDark && 'contact__phone--dark'}`}>+39 0873 801409</Link>
 
                 <div className="contact__block-data">
-                    <span className="contact__block-title">Address</span>
-                    <span className="contact__block-text">Via Lambruschina, 8A, 02040 Borgonuovo RI, Italy</span>
+                    <span className={`contact__block-title ${isDark && 'contact__block-title--dark'}`}>Address</span>
+                    <span className={`contact__block-text ${isDark && 'contact__block-text--dark'}`}>Via Lambruschina, 8A, 02040 Borgonuovo RI, Italy</span>
                 </div>
                 <div className="contact__block-data">
-                    <span className="contact__block-title">Opening hours</span>
+                    <span className={`contact__block-title ${isDark && 'contact__block-title--dark'}`}>Opening hours</span>
                     <p className={`contact__block-text ${isDark && 'contact__block-text--dark'}`}>Monday - Thursday : 9am - 10pm</p>
                     <p className={`contact__block-text ${isDark && 'contact__block-text--dark'}`}>Friday : 9am - 11pm</p>
                     <p className={`contact__block-text ${isDark && 'contact__block-text--dark'}`}>Saturday - Sunday : 10am - 2am</p>
                 </div>
                 <div className="contact__block-data">
-                    <span className="contact__block-title">Email</span>
-                    <span className="contact__block-text">infovirgolini@gmail.com</span>
+                    <span className={`contact__block-title ${isDark && 'contact__block-title--dark'}`}>Email</span>
+                    <span className={`contact__block-text ${isDark && 'contact__block-text--dark'}`}>infovirgolini@gmail.com</span>
                 </div>
                 <Socials />
             </div>
