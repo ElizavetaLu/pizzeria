@@ -16,10 +16,18 @@
         line-height: 60px;
         font-size: 3rem;
         text-transform: uppercase;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__title-thin {
         font-weight: 300;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__data-description {
@@ -27,6 +35,10 @@
         font-size: 18px;
         margin-bottom: 30px;
         line-height: 27px;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__data-button {
@@ -43,7 +55,7 @@
     &__form-container {
         position: relative;
         background-image: url('../../../public/images/background/sign-form.jpg');
-        background-size: cover; 
+        background-size: cover;
         padding: 100px 20px;
         display: flex;
         justify-content: center;
@@ -57,5 +69,51 @@
         left: 0;
         background: rgb(0, 0, 0);
         background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.83) 100%);
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .career {
+        padding: $container_padding-mobile;
+        margin-top: $margin_between_sections-mobile;
+
+        &__data {
+            margin-bottom: $margin_between_sections-mobile;
+        }
+
+        &__title {
+            font-size: 2rem;
+            line-height: 50px;
+        }
+
+        &__data-description {
+            padding-top: 8px;
+            font-size: 16px;
+        }
+
+        &__data-button {
+            @include button-mobile(16px)
+        }
+
+        &__positions {
+            height: 400px;
+        }
+
+        &__form-container { 
+            padding: 60px 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .career {
+        &__data {
+            margin-bottom: 50px;
+        }
+
+        &__positions {
+            height: 280px;
+        }
     }
 }

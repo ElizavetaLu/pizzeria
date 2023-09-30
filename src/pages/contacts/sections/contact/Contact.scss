@@ -40,6 +40,10 @@
         bottom: 100%;
         font-size: 14px;
         color: $main_dark_color;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__field-name {
@@ -58,8 +62,8 @@
 
     &__button {
         @include button($secondary, $main_light_color, 0, $secondary, 18px);
-        align-self: flex-end; 
-        border-width: 1.5px; 
+        align-self: flex-end;
+        border-width: 1.5px;
         font-weight: 500;
 
         &:hover {
@@ -94,6 +98,14 @@
             background-color: $primary;
             padding-left: 100%;
         }
+
+        &--dark {
+            color: $primary_dark-theme;
+        }
+
+        &--dark:hover::after {
+            background-color: $primary_dark-theme;
+        }
     }
 
     &__block-data {
@@ -108,9 +120,51 @@
         letter-spacing: 0.4px;
         font-size: 15px;
         font-weight: 500;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__block-text {
         color: #828282;
+
+        &--dark {
+            color: #b5b5b5;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact {
+        flex-direction: column;
+
+        &__block {
+            width: 100%;
+        }
+
+        &__button {
+            @include button-mobile(16px)
+        }
+
+        &__phone {
+            font-size: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contact {
+        &__block-inputs {
+            flex-wrap: wrap;
+        }
+
+        &__block-title {
+            font-size: 13px;
+        }
+
+        &__block-text {
+            font-size: 14px;
+        }
     }
 }

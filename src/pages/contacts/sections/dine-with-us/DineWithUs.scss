@@ -11,7 +11,7 @@
     align-items: center;
 
     &__dark-bg {
-        position: absolute; 
+        position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
@@ -48,11 +48,62 @@
     }
 
     &__button {
-        @include button($main_light_color, $main_light_color, 0, $secondary, 18px);
+        @include button($main_light_color, $main_dark_color, 0, $secondary, 18px);
     }
 
     &__button-book {
         background-color: $primary;
         color: $main_light_color;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .dine {
+        padding: 70px 20px;
+
+        &__data {
+            width: 50%;
+        }
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__phone {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        &__button {
+            @include button-mobile(16px)
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .dine {
+        padding: 50px 16px;
+
+        &__data {
+            width: 70%;
+        }
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__data {
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        &__phone {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        &__button {
+            font-size: 14px;
+        }
     }
 }
