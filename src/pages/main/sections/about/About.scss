@@ -4,14 +4,16 @@
     @include container;
 
     .about-section {
-        margin-top: $margin_between_sections;
+        margin: $margin_between_sections 0;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
 
         &__block {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 40px;
-            margin-bottom: $margin_between_sections;
             width: 90%;
 
             &--space {
@@ -61,6 +63,80 @@
 
 @media screen and (max-width: 900px) {
     .about-container {
-        padding: $container_padding-mobile; 
+        padding: $container_padding-mobile;
+
+        .about-section {
+            margin: $margin_between_sections-mobile 0;
+
+            .images {
+                &__image {
+                    height: 140px;
+
+                    &--left {
+                        bottom: -20px;
+                        left: 35%;
+                    }
+
+                    &--right {
+                        top: -20px;
+                        right: -15%;
+                    }
+                }
+
+                &__image-vertical {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .about-container {
+        .about-section {
+            &__block {
+                width: 100%;
+                gap: 20px;
+            }
+
+            .images {
+                width: auto;
+
+                &__image {
+
+                    &--right,
+                    &--left {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+    .about-container {
+        .about-section {
+            gap: 40px;
+
+            &__block--space {
+                margin-top: 0px;
+            }
+
+            &__block {
+                flex-direction: column;
+
+                &:last-child {
+                    flex-direction: column-reverse;
+                }
+            }
+
+            .images {
+                &__image-vertical {
+                    display: none;
+                }
+            }
+        }
     }
 }

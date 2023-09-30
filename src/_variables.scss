@@ -7,7 +7,7 @@ $primary: #ff7919;
 $secondary: #B68D40;
 $tertiary: #074e24;
 $primary_dark-theme: #ff862f;
-$secondary_dark-theme: #b4904c;
+$secondary_dark-theme: #c39c53;
 $tertiary_dark-theme: #08602d;
 
 
@@ -45,6 +45,7 @@ $container_padding-mobile: 0 16px;
 
 
 @mixin button($bg-color, $color, $border-radius, $border-color, $font-size) {
+    display: inline-block;
     cursor: pointer;
     background-color: $bg-color;
     padding: 15px 30px;
@@ -57,6 +58,10 @@ $container_padding-mobile: 0 16px;
     transition: all .2s ease-out;
 }
 
+@mixin button-mobile($font-size) {
+    font-size: $font-size;
+    padding: 10px 20px
+}
 
 
 

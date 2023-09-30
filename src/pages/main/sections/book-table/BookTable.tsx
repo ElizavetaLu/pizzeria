@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
-import "./BookTable.scss"
 import OpeningHours from "../../../../components/opening-hours/OpeningHours"
 import Flag from "../../../../components/flag/Flag"
+import "./BookTable.scss"
 
 export default function BookTable() {
 
@@ -13,7 +13,7 @@ export default function BookTable() {
         <p className={`book-table__prescription ${isDark && 'book-table__prescription--dark'}`}>book online anytime</p>
         <p className={`book-table__title ${isDark && 'book-table__title--dark'}`}>book a table</p>
 
-        <Flag/>
+        <Flag />
 
         <OpeningHours />
 

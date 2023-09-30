@@ -34,6 +34,16 @@ export type TPosition = {
     scroll: any
 }
 
+export type TAboutTextBlock = {
+    prescription: string,
+    title: string,
+    content: string,
+    buttonText: string,
+    secondButtonText?: string,
+    path: string
+    secondPath?: string
+}
+
 export type TLoaction = {
     lat: number,
     lng: number,

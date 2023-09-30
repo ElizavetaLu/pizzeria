@@ -52,13 +52,15 @@
         }
 
         &__button {
-            @include button(transparent, $secondary, 0, transparent, 18px);
+            @include button(transparent, $secondary, 0, $secondary, 18px);
             margin: 30px 0;
-            width: 100%;  
+            width: 100%;
+            border-right: transparent;
+            border-left: transparent;
 
             &:hover {
-                border-color: $secondary_dark-theme;
-                color: $secondary_dark-theme;
+                background-color: $secondary_dark-theme;
+                color: $main_light_color;
             }
         }
 
@@ -80,6 +82,18 @@
     .footer-container {
         .footer {
             padding: $container_padding-mobile;
+
+            &__button {
+                @include button-mobile(16px)
+            }
+
+            &__item-text {
+                font-size: 14px;
+            }
+
+            &__rights {
+                font-size: 12px;
+            }
         }
     }
 }

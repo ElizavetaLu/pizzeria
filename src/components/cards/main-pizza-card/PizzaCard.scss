@@ -21,19 +21,25 @@ $max-width: 250px;
     &__new {
         position: absolute;
         top: -15px;
-        left:-15px;
+        left: -15px;
         width: 40px;
+
+        &--dark {
+            filter: brightness(1.5);
+        }
     }
 
     &__image {
         margin-top: 20px;
         width: 100%;
         max-width: $max-width;
-        box-shadow: 5px 20px 30px #6a6a6ab8;
+        box-shadow: 4px 15px 20px #858585b8;
         border-radius: 100%;
 
         &--dark {
-            box-shadow: 5px 20px 40px $main_light_color;
+            box-shadow: 4px 15px 20px #5a5a5ab8;
+            filter: brightness(1.5);
+            filter: grayscale(.1);
         }
     }
 
@@ -47,6 +53,10 @@ $max-width: 250px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__mobile-row {
+        display: none;
     }
 
     &__name {
@@ -67,11 +77,16 @@ $max-width: 250px;
 
     &__add-icon {
         width: 26px;
+
+        &--dark {
+            filter: invert(1);
+        }
     }
 
     &__price {
         font-size: 24px;
         font-weight: 500;
+        margin-bottom: 20px;
 
         &--dark {
             color: $main_light_color;
@@ -92,10 +107,12 @@ $max-width: 250px;
     .card {
         flex-direction: row;
         max-width: 100%;
-        height: 260px;
+        gap: 25px;
 
         &__image {
-            max-width: 200px;
+            margin-top: 0px;
+            max-width: 170px;
+            box-shadow: 2px 7px 15px #7a7a7ab8;
         }
 
         &__data {
@@ -111,8 +128,61 @@ $max-width: 250px;
 @media screen and (max-width: 600px) {
     .card {
         height: 100%;
+
         &__image {
             max-width: 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card {
+        padding: 14px;
+
+        &__new {
+            width: 35px;
+            top: -10px;
+            left: -10px;
+        }
+
+        &__mobile-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &__image {
+            display: none;
+        }
+
+        &__image-mobile {
+            width: 100%;
+            max-width: 90px;
+            border-radius: 100%;
+        }
+
+        &__name-mobile {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        &__name {
+            display: none;
+        }
+
+        &__last-row {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        &__price {
+            font-size: 19px;
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+
+        &__ingredients {
+            font-size: 13px;
         }
     }
 }

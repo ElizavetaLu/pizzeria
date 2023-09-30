@@ -8,5 +8,14 @@
 
     &__time {
         color: $main_light_color;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .opening-hours {
+        &__time {
+            font-size: 14px;
+        }
     }
 }

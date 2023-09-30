@@ -9,7 +9,7 @@ export default function PizzaCell({ name, ingredients, isNew }: TNameAndIngredie
     return (
         <div className="pizza-smcell">
             {
-                isNew && <img className="pizza-smcell__new" src="/images/icons/new.png" alt="" />
+                isNew && <img className={`pizza-smcell__new ${isDark && 'pizza-smcell__new--dark'}`} src="/images/icons/new.png" alt="" />
             }
             <p className={`pizza-smcell__name ${isDark && 'pizza-smcell__name--dark'}`}>{name}</p>
             <p className={`pizza-smcell__ingredients ${isDark && 'pizza-smcell__ingredients--dark'}`}>{ingredients.join(', ')}</p>
