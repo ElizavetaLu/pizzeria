@@ -14,6 +14,10 @@
         &:hover {
             transform: scale(1.1);
         }
+
+        &--dark {
+            filter: invert(1);
+        }
     }
 
     &--move {
@@ -39,11 +43,14 @@
     top: 50px;
     width: 50%;
     padding: 30px 20px 20px;
-    background-color: $tertiary;
     box-shadow: 3px 3px 8px #4b4b4b25;
     border-radius: 8px;
     overflow: hidden;
     transition: all .4s linear;
+
+    &--dark {
+        background-color: $main_dark_color;
+    }
 
     &--hidden {
         width: 0;
@@ -65,6 +72,10 @@
         width: 30px;
         transition: all .2s ease;
 
+        &--dark {
+            filter: invert(1);
+        }
+
         &:hover {
             transform: translateX(4px);
         }
@@ -75,13 +86,22 @@
         font-weight: 500;
         margin-bottom: 20px;
         transition: all .4s ease;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__list {
-        margin: 20px 0 40px;
+        margin: 30px 0 40px;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
+        max-height: 420px;
+        padding-top: 20px;
+        padding-right: 10px;
+        overflow: hidden;
+        overflow-y: scroll;
     }
 
     &__dummy {
@@ -90,14 +110,54 @@
     }
 
     &__button {
-        @include button(transparent, $main_light_color, 0, transparent, 16px);
+        @include button(transparent, $main_dark_color, 0, transparent, 16px);
         width: 100%;
-        border-top: 1px solid $main_dark_color;
-        border-bottom: 1px solid $main_dark_color;
+        border-top: 1px solid $tertiary;
+        border-bottom: 1px solid $tertiary;
 
         &:hover {
-            background-color: $main_dark_color;
+            background-color: $tertiary_dark-theme;
             color: $main_light_color;
         }
+
+        &--dark {
+            border-top: 1px solid $secondary_dark-theme;
+            border-bottom: 1px solid $secondary_dark-theme;
+            color: $secondary_dark-theme;
+        }
+
+        &--dark:hover {
+            background-color: $secondary_dark-theme;
+        }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .main-cart {
+        padding: 25px 15px 15px;
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__hide-button {
+            right: 7px;
+            top: 3px;
+        }
+
+        &__hide-icon {
+            width: 25px;
+        }
+
+        &__list {
+            margin: 20px 0 35px;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .main-cart,
+    .cart-button {
+        display: none;
     }
 }

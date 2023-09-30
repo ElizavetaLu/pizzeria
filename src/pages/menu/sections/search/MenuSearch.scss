@@ -25,6 +25,11 @@
         &::placeholder {
             text-transform: capitalize;
         }
+
+        &--dark {
+            border-color: $main_light_color;
+            color: $main_light_color;
+        }
     }
 
     &__filter {
@@ -34,5 +39,29 @@
 
     &__icon {
         width: 30px;
-    } 
+        transition: all .2s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &--dark {
+            filter: invert(1);
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .menu-search {
+        margin-top: $margin_between_sections-mobile;
+
+        &__input {
+            width: 50%;
+            font-size: 18px;
+        }
+
+        &__icon {
+            width: 25px;
+        }
+    }
 }

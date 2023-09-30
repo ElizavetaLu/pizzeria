@@ -1,7 +1,7 @@
 @import "../../../../variables";
 
 .checkbox {
-    display: block;
+    display: flex; 
     position: relative;
     padding-left: 30px;
     cursor: pointer;
@@ -34,6 +34,10 @@
         font-size: 16px;
         text-transform: capitalize;
         cursor: pointer;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__checkmark {
@@ -59,6 +63,19 @@
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .checkbox {
+        padding-left: 23px;
+        &__text {
+            font-size: 14px;
+        }
+        &__checkmark {
+            height: 15px;
+            width: 15px;
         }
     }
 }

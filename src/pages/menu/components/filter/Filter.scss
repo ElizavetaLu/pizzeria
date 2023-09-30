@@ -4,17 +4,20 @@
     position: absolute;
     z-index: 1;
     bottom: -450px;
-    background-color: $tertiary;
+    background-color: $main_light_color;
     box-shadow: 2px 2px 6px #4b4b4b25;
     border-radius: 8px;
-    padding: 15px 20px;
-    width: 23%;
+    padding: 15px 30px;
+    max-width: 370px;
     overflow: hidden;
     transition: all .4s linear;
-    height: 430px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &--dark {
+        background-color: $main_dark_color;
+    }
 
     &--hidden {
         height: 0px;
@@ -32,11 +35,24 @@
     &__close-icon {
         width: 26px;
         transform: rotateZ(45deg);
+        transition: all .2s ease;
+
+        &:hover {
+            transform: rotateZ(45deg) scale(1.1);
+        }
+
+        &--dark {
+            filter: invert(1);
+        }
     }
 
     &__title {
         font-size: 18px;
         margin-bottom: 15px;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__ingredients {
@@ -63,14 +79,58 @@
         font-size: 18px;
         color: #5a5a5a;
         margin-bottom: 8px;
+
+        &--dark {
+            color: #e1e1e1;
+        }
     }
 
     &__button-container {
         display: flex;
         justify-content: center;
+        margin-top: 40px
     }
 
     &__button {
         @include button(transparent, $main_dark_color, 0, $main_dark_color, 16px);
+
+        &:hover {
+            background-color: $main_dark_color;
+            color: $main_light_color;
+        }
+
+        &--dark {
+            color: $main_light_color;
+            border-color: $main_light_color;
+        }
+
+        &--dark:hover {
+            color: $main_dark_color;
+            background-color: $main_light_color;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .filter {
+        max-width: 300px;
+        bottom: -410px;
+
+        &__title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        &__parameter {
+            font-size: 15px;
+        }
+
+        &__button-container {
+            margin-top: 30px;
+        }
+
+        &__button {
+            @include button-mobile(14px)
+        }
     }
 }

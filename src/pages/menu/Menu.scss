@@ -22,10 +22,13 @@
         }
 
         &__title {
+            margin-top: 40px;
             z-index: 1;
             font-size: 4rem;
             text-transform: capitalize;
             color: $main_light_color;
+            text-align: center;
+            max-width: 90%;
         }
 
         &__button {
@@ -40,8 +43,44 @@
         }
     }
 
-
     .menu {
         @include container;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .menu-container {
+        margin-bottom: $margin_between_sections-mobile;
+
+        .image-section {
+            height: 65vh;
+
+            &__title {
+                font-size: 3rem;
+            }
+
+            &__button {
+                margin-top: 30px;
+                @include button-mobile(16px)
+            }
+        }
+
+        .menu {
+            padding: $container_padding-mobile;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .menu-container {
+        .image-section {
+            &__title {
+                font-size: 2rem;
+            }
+
+            &__button {
+                font-size: 14px;
+            }
+        }
     }
 }

@@ -1,14 +1,14 @@
 @import "../../../../variables";
 
 .menu-list {
+    position: relative;
     background-image: url("../../../../../public/images/background/menu-bg.png");
-    background-size: cover;
     border-radius: 8px;
     padding: 20px 30px;
+    background-size: contain;
 
-    &__title {
-        font-size: 34px; 
-        text-align: center;
+    &--dark {
+        background-image: url("../../../../../public/images/background/menu-dark-bg.jpg");
     }
 
     &__items {
