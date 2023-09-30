@@ -1,4 +1,5 @@
 import CircleSection from "./sections/circle-section/CircleSection"
+import MobileWelcome from "./sections/mobile-welcome/MobileWelcome"
 import Signboard from "./components/signboard/Signboard"
 import BookTable from "./sections/book-table/BookTable"
 import NewPizza from "./sections/new-pizza/NewPizza"
@@ -11,6 +12,7 @@ export default function Main() {
   return (
     <main className="main">
       <CircleSection />
+      <MobileWelcome />
       <Signboard />
       <NewPizza />
       <BookTable />

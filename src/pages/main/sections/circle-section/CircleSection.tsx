@@ -1,16 +1,14 @@
 import { Fragment, useState } from "react"
-import { useSelector } from "react-redux"
-import './CircleSection.scss'
-import SelectSize from "../../components/select-size/SelectSize"
-import { pizza } from "../../../../data"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
+import { pizza } from "../../../../data"
+import './CircleSection.scss'
 
- 
+
 
 export default function CircleSection() {
 
     const { isDark } = useSelector((state: any) => state.theme)
-    // const isDark = true
 
     const [currentId, setCurrentId] = useState<number>(11)
 
@@ -26,8 +24,6 @@ export default function CircleSection() {
 
     return (
         <section className={`circle-section ${isDark && 'circle-section--dark'}`}>
-
-            {/* <SelectSize /> */}
 
             <div className={`main-circle ${isDark && 'main-circle--dark'}`}>
                 {
@@ -72,7 +68,7 @@ export default function CircleSection() {
                 </div>
 
                 <div className="main-circle__buttons">
-                    <button className="main-circle__button">order now</button>
+                    <button className="main-circle__button">add to cart</button>
                     <Link to="menu" className="main-circle__button">view all</Link>
                 </div>
             </div >

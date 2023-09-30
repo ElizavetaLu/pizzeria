@@ -2,7 +2,6 @@
 
 $default-color: #000;
 $light-color: #000;
-$active-item: #ff7919;
 
 .circle-section {
     position: relative;
@@ -33,7 +32,7 @@ $active-item: #ff7919;
             }
 
             &--active {
-                background-color: $active-item;
+                background-color: $primary;
             }
 
             &--active::after {
@@ -41,13 +40,13 @@ $active-item: #ff7919;
                 position: absolute;
                 width: 20px;
                 height: 20px;
-                border: 1px solid $active-item;
+                border: 1px solid $primary;
                 border-radius: 50px;
             }
 
             &--hidden {
                 display: none;
-            }
+            } 
         }
 
         &__dot-item {
@@ -57,7 +56,7 @@ $active-item: #ff7919;
             }
 
             &--active {
-                color: $active-item;
+                color: $primary;
             }
 
             &--hidden {
@@ -116,27 +115,50 @@ $active-item: #ff7919;
 
 @media screen and (max-width: 1130px) {
     .circle-section {
-        height: 650px;
+        height: 630px;
 
         .main-circle {
             @include on-circle($item-count: 20, $circle-size: 780px, $item-size: 10px);
+
+            &__buttons {
+                top: 27%;
+            }
         }
     }
 }
 
 @media screen and (max-width: 900px) {
     .circle-section {
-        padding-top: 100px;
-        height: 540px;
+        padding-top: 0px;
+        height: 440px;
 
         .main-circle {
-            @include on-circle($item-count: 20, $circle-size: 610px, $item-size: 10px);
+            @include on-circle($item-count: 20, $circle-size: 580px, $item-size: 10px);
 
             .additional-circle {
                 border: none;
+
+                &__image {
+                    width: 56vw;
+                    height: 27vw;
+                }
+            }
+
+            &__dot-item {
+                font-size: 14px;
+            }
+
+
+
+            &__button {
+                @include button-mobile(12px);
             }
         }
     }
 }
 
-@media screen and (max-width: 700px) {}
+@media screen and (max-width: 700px) {
+    .circle-section {
+        display: none;
+    }
+}

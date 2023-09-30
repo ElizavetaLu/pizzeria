@@ -17,6 +17,10 @@
         width: 1.5px;
         background-color: $main_dark_color;
         opacity: 0.4;
+
+        &--dark {
+            background-color: $main_light_color;
+        }
     }
 
     &__link-container {
@@ -48,6 +52,10 @@
             background-color: $main_dark_color;
             padding-left: 100%;
         }
+
+        &--dark:hover::after {
+            background-color: $main_light_color;
+        }
     }
 }
 
@@ -59,6 +67,14 @@
         &__menu-separator,
         &__menu-separator~.small-table {
             display: none;
+        }
+
+        &__menu {
+            margin-bottom: 20px;
+        }
+
+        &__link {
+            font-size: 16px;
         }
     }
 }

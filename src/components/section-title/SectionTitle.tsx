@@ -7,7 +7,7 @@ export default function SectionTitle({ prescription, title }: { prescription: st
 
     return (
         <div className="title">
-            <span className="title__prescription">{prescription}</span>
+            <span className={`title__prescription  ${isDark && 'title__prescription--dark'}`}>{prescription}</span>
             <h3 className={`title__text ${isDark && 'title__text--dark'}`}>{title}</h3>
         </div>
     )

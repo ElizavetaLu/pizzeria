@@ -36,7 +36,7 @@ export default function Footer() {
               </li>
               <li className="footer__list-item">
                 <img className="footer__item-icon" src="/images/icons/phone.png" alt="" />
-                <span className="footer__item-text">+39 0873 801409</span>
+                <Link to="tel:+39 0873 801409" className="footer__item-text">+39 0873 801409</Link>
               </li>
               <li className="footer__list-item">
                 <img className="footer__item-icon" src="/images/icons/email.png" alt="" />

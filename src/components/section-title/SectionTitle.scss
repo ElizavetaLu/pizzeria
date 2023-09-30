@@ -8,14 +8,32 @@
 
     &__prescription {
         @include gold_text;
+
+        &--dark {
+            color: $secondary_dark-theme;
+        }
     }
 
     &__text {
-        font-size: 32px; 
+        font-size: 32px;
         text-transform: capitalize;
 
         &--dark {
             color: $main_light_color;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .title {
+        gap: 8px;
+
+        &__prescription {
+            font-size: 16px;
+        }
+
+        &__text {
+            font-size: 25px;
         }
     }
 }

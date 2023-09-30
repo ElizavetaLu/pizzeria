@@ -4,12 +4,12 @@ import "./Menu.scss"
 
 export default function Menu() {
 
-
     return (
         <div className="menu-container">
-            <section className="menu-container__image-section">
-                <h1 className="menu-container__title">some text</h1>
-                <button className="menu-container__button">view our menu</button>
+            <section className="image-section">
+                <div className="image-section__dark-bg"></div>
+                <h1 className="image-section__title">made by hand, eaten by hand</h1>
+                <button className="image-section__button">view our menu</button>
             </section>
 
             <main className="menu">

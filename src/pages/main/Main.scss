@@ -11,6 +11,9 @@
 
 @media screen and (max-width: 900px) {
     .main {
-        margin-top: $margin_between_sections-mobile
+        &__section-separator {
+            height: 200px;
+            margin-top: $margin_between_sections-mobile;
+        }
     }
 }

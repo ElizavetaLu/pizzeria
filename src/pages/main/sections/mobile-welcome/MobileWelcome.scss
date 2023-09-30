@@ -1,0 +1,36 @@
+@import "../../../../variables";
+
+.welcome {
+    height: 350px;
+    background-image: url('../../../../../public/images/background/mobile-main-bg.jpeg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+
+    &__title {
+        font-size: 30px;
+        max-width: 90%;
+        text-transform: uppercase;
+        color: $main_light_color;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        @include button(transparent, $main_light_color, 50px, $main_light_color, 14px);
+
+        &:active {
+            background-color: $main_light_color;
+            color: $main_dark_color;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .welcome {
+        display: none;
+    }
+}

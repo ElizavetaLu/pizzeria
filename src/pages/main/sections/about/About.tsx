@@ -1,11 +1,8 @@
-import { useSelector } from "react-redux"
 import TextBlock from "./text-block/TextBlock"
 import "./About.scss"
 
 
 export default function About() {
-
-    const { isDark } = useSelector((state: any) => state.theme)
 
     return (
         <div className="about-container">
@@ -20,7 +17,9 @@ export default function About() {
                         title="a family story"
                         content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda eveniet explicabo modi? Sapiente in, modi quam expedita porro reiciendis nostrum"
                         buttonText="history"
+                        secondButtonText="join us"
                         path="#"
+                        secondPath="career"
                     />
                 </div>
 
