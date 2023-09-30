@@ -1,8 +1,11 @@
 import { useState } from "react"
+import { useSelector } from "react-redux";
 import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
 import "./Range.scss"
 
 export default function Range() {
+
+    const { isDark } = useSelector((state: any) => state.theme)
 
     const [from, setFrom] = useState<number>(10)
     const [to, setTo] = useState<number>(40)
@@ -14,7 +17,7 @@ export default function Range() {
                 <label className="range__input-name" htmlFor="from">
                     From
                     <input
-                        className="range__price-input"
+                        className={`range__price-input ${isDark && 'range__price-input--dark'}`}
                         type="number"
                         name="from"
                         id="from"
@@ -26,7 +29,7 @@ export default function Range() {
                 <label className="range__input-name" htmlFor="to">
                     To
                     <input
-                        className="range__price-input"
+                        className={`range__price-input ${isDark && 'range__price-input--dark'}`}
                         type="number"
                         name="to"
                         id="to"
@@ -54,7 +57,7 @@ export default function Range() {
                     setFrom(e.minValue);
                     setTo(e.maxValue);
                 }}
-            /> 
+            />
         </div>
 
     )

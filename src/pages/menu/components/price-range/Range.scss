@@ -26,6 +26,10 @@
         text-align: center;
         font-size: 18px;
         font-weight: 500;
+
+        &--dark {
+            color: $main_light_color;
+        }
     }
 
     &__input {
@@ -35,12 +39,12 @@
         cursor: pointer;
         width: 100%;
 
-        &::-webkit-slider-runnable-track { 
+        &::-webkit-slider-runnable-track {
             height: 5px;
             background-color: $select_active;
         }
 
-        &::-moz-range-track { 
+        &::-moz-range-track {
             height: 5px;
             background-color: $select_active;
         }
@@ -92,11 +96,31 @@
             width: 15px;
             height: 15px;
             margin: -8px -12px;
-
         }
 
         .thumb:active>.caption {
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .range {
+
+        &__input-name {
+            font-size: 10px;
+        }
+
+        &__price-input {
+            font-size: 16px;
+        }
+
+        .multi-range-slider {
+            .thumb::before {
+                width: 10px;
+                height: 10px;
+                margin: -5px -5px;
+            }
         }
     }
 }

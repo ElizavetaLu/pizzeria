@@ -13,9 +13,10 @@ $max-width: 250px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 8px #7878783e;
-
+    
     &--dark {
         background-color: $main_dark_color;
+        box-shadow: 3px 3px 10px #000000b7; 
     }
 
     &__new {
@@ -37,8 +38,7 @@ $max-width: 250px;
         border-radius: 100%;
 
         &--dark {
-            box-shadow: 4px 15px 20px #5a5a5ab8;
-            filter: brightness(1.5);
+            box-shadow: 4px 10px 20px #000000b7;
             filter: grayscale(.1);
         }
     }
