@@ -4,6 +4,7 @@
     position: absolute;
     z-index: 1;
     bottom: -450px;
+    height: 435px;
     background-color: $main_light_color;
     box-shadow: 2px 2px 6px #4b4b4b25;
     border-radius: 8px;
@@ -114,7 +115,13 @@
 @media screen and (max-width: 900px) {
     .filter {
         max-width: 300px;
+        height: 400px;
         bottom: -410px;
+
+        &--hidden {
+            height: 0px;
+            bottom: -10px; 
+        }
 
         &__title {
             font-size: 16px;

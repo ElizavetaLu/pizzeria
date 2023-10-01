@@ -1,25 +1,30 @@
 import { useState } from "react"
 import { useSelector } from "react-redux"
-import Flag from "../../../../components/flag/Flag"
+import CartItemsAmount from "../../../../components/cart-items-amount/CartItemsAmount"
 import CartCard from "../../../../components/cards/cart-card/CartCard"
+import Flag from "../../../../components/flag/Flag"
+import { TPizzaCard } from "../../../../types"
 import "./Cart.scss"
 
-const test: any = [1,2,3,4,5]
 
 
 export default function Cart() {
 
   const { isDark } = useSelector((state: any) => state.theme)
+  const { data } = useSelector((state: any) => state.cart)
 
   const [isShown, setIsShown] = useState<boolean>(false)
-  const [isCartEmpty] = useState<boolean>(test.length === 0)
+
+  const allPrices = data.length && data.map((item: TPizzaCard) => item.qty * item.price)
+  const total = data.length && allPrices.reduce((a: number, b: number) => a + b, 0)
+ 
 
   return (
     <>
       <button className={`cart-button ${isShown && 'cart-button--move'}`} onClick={() => setIsShown(prev => !prev)}>
         <img className={`cart-button__icon ${isDark && 'cart-button__icon--dark'}`} src="/images/icons/cart.png" alt="" />
         {
-          !isCartEmpty && <div className="cart-button__circle">{test.length}</div>
+          data.length !== 0 && <CartItemsAmount />
         }
       </button>
 
@@ -34,17 +39,25 @@ export default function Cart() {
 
         <div className="main-cart__list">
           {
-            isCartEmpty
+            data.length === 0
               ? <p className="main-cart__dummy">Nothing for now...</p>
-              : test.map((item: any) => {
+              : data.map((item: any) => {
                 return (
-                  <CartCard key={item} />
+                  <CartCard key={item._id} {...item} />
                 )
               })
           }
         </div>
 
-        <button className={`main-cart__button ${isDark && 'main-cart__button--dark'}`}>to checkout</button>
+        <div>
+
+          <div className="main-cart__total">
+            <span className={`main-cart__total-title ${isDark && 'main-cart__total-title--dark'}`}>Total:</span>
+            <span className={`main-cart__total-amount ${isDark && 'main-cart__total-amount--dark'}`}>{total}$</span>
+          </div>
+
+          <button className={`main-cart__button ${isDark && 'main-cart__button--dark'}`}>to checkout</button>
+        </div>
       </div>
     </>
   )

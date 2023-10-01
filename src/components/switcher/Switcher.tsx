@@ -1,7 +1,8 @@
 import { Dispatch } from "react"
-import "./Switcher.scss"
 import { useDispatch, useSelector } from "react-redux"
 import { switchTheme } from "../../store/actions/actionCreatores";
+import "./Switcher.scss"
+
 
 export default function Switcher() {
 
@@ -16,7 +17,7 @@ export default function Switcher() {
                 name="switcher"
                 className="switcher__input"
                 value={isDark}
-                onChange={() => dispatch(switchTheme())} 
+                onChange={() => dispatch(switchTheme())}
             />
             <label htmlFor="switcher" className="switcher__label">
                 <span className="switcher__circle"></span>

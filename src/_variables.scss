@@ -73,7 +73,7 @@ $container_padding-mobile: 0 16px;
     height: $circle-size;
     border-radius: 50%;
     margin: 160px auto 0;
-    border: solid 1.5px $default-color;
+    border: solid 1.5px #000;;
 
     &__dot {
         cursor: pointer;
@@ -84,7 +84,7 @@ $container_padding-mobile: 0 16px;
         height: 10px;
         margin: -4px;
         border-radius: 50%;
-        background-color: $default-color;
+        background-color: #000;;
         transition: background-color .2s ease;
         @include flex-center;
 

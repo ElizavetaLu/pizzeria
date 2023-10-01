@@ -23,18 +23,6 @@
     &--move {
         display: none;
     }
-
-    &__circle {
-        position: absolute;
-        right: -7px;
-        top: -3px;
-        width: 20px;
-        height: 20px;
-        @include flex-center;
-        border-radius: 100%;
-        color: $main_light_color;
-        background-color: $red;
-    }
 }
 
 .main-cart {
@@ -93,11 +81,12 @@
     }
 
     &__list {
-        margin: 30px 0 40px;
+        margin-top: 30px ;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        max-height: 420px;
+        max-height: 320px;
+        padding: 20px 10px 40px 0px;
         padding-top: 20px;
         padding-right: 10px;
         overflow: hidden;
@@ -107,6 +96,29 @@
     &__dummy {
         color: #7b7b7b;
         font-size: 16px;
+    }
+
+    &__total {
+        margin-bottom: 10px;
+    }
+
+    &__total-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-right: 10px;
+
+        &--dark {
+            color: $main_light_color
+        }
+    }
+
+    &__total-amount {
+        font-size: 20px;
+        font-weight: 600;
+
+        &--dark {
+            color: $main_light_color
+        }
     }
 
     &__button {
@@ -134,7 +146,6 @@
 
 @media screen and (max-width: 1170px) {
     .main-cart {
-        padding: 25px 15px 15px;
 
         &__title {
             font-size: 18px;
@@ -145,17 +156,13 @@
             top: 3px;
         }
 
-        &__hide-icon {
-            width: 25px;
-        }
-
         &__list {
             margin: 20px 0 35px;
         }
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 995px) { 
     .main-cart,
     .cart-button {
         display: none;
