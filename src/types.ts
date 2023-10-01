@@ -7,6 +7,7 @@ export type TPizzaSizes = {
 
 export type TPizzaCard = {
     _id: number,
+    qty: number,
     isNew: boolean,
     name: string,
     image: string,

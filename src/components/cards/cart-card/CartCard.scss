@@ -3,8 +3,9 @@
 .cart-card {
     box-shadow: 2px 2px 6px #9b9b9b3f;
     position: relative;
-    border-radius: 8px;
-    padding: 10px 10px 16px 10px;
+    border-radius: 8px; 
+    padding: 10px 20px;
+    background-color: #fefefe;
 
     &--dark {
         background-color: #212121;
@@ -60,9 +61,22 @@
         justify-content: space-between;
     }
 
+    &__product-data{
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
     &__price {
         font-size: 18px;
         font-weight: 500;
+
+        &--dark {
+            color: $main_light_color;
+        }
+    }
+    &__weight {
+        font-size: 12px; 
 
         &--dark {
             color: $main_light_color;

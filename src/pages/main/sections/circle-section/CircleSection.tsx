@@ -1,6 +1,8 @@
 import { Fragment, useState } from "react"
 import { Link } from "react-router-dom"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { addToCart } from "../../../../store/actions/actionCreatores"
+import { TPizzaCard } from "../../../../types"
 import { pizza } from "../../../../data"
 import './CircleSection.scss'
 
@@ -8,18 +10,22 @@ import './CircleSection.scss'
 
 export default function CircleSection() {
 
+    const dispatch = useDispatch()
+
     const { isDark } = useSelector((state: any) => state.theme)
 
-    const [currentId, setCurrentId] = useState<number>(11)
+    const [currentPizza, setCurrentPizza] = useState<TPizzaCard>(pizza[11]) 
 
-    const [current] = useState<string>('pizza-3')
-    const [next, setNext] = useState<string | null>(null)
+
+    // const [current] = useState<string>('1.png')
+    // const [next, setNext] = useState<string | null>(null)
     const [countRotation, setCountRotation] = useState<number>(0)
 
-    const selectPizza = (id: number, image: string) => {
-        setCurrentId(id)
-        setNext(image)
+    const selectPizza = (item: TPizzaCard) => {
+        //     setCurrentId(id)
+        //     setNext(image)
         setCountRotation(prev => prev + 1)
+        setCurrentPizza(item)
     }
 
     return (
@@ -35,40 +41,45 @@ export default function CircleSection() {
                                     className={`main-circle__dot 
                                     ${isDark && 'main-circle__dot--dark'} 
                                     ${i < 11 && 'main-circle__dot--hidden'}
-                                    ${item._id === currentId && 'main-circle__dot--active'}
+                                    ${item._id === currentPizza._id && 'main-circle__dot--active'}
                                     `}
-                                    onClick={() => selectPizza(item._id, item.image)}
+                                    onClick={() => selectPizza(item)}
                                 >
                                 </div>
                                 <span
                                     className={`main-circle__dot-item 
                                     ${isDark && 'main-circle__dot-item--dark'} 
                                     ${i < 11 && 'main-circle__dot-item--hidden'}
-                                    ${item._id === currentId && 'main-circle__dot-item--active'}
+                                    ${item._id === currentPizza._id && 'main-circle__dot-item--active'}
                                     `}
-                                    onClick={() => selectPizza(item._id, item.image)}
+                                    onClick={() => selectPizza(item)}
                                 >{item.name}</span>
                             </Fragment>
                         )
                     })
                 }
 
-                <div className={`additional-circle ${isDark && 'additional-circle--dark'}`} style={{ transform: `rotate(${180 * countRotation}deg)` }}>
-                    <img
-                        className="additional-circle__image"
-                        src={`/images/pizza-select/${current}.png`}
-                        alt=""
-                    />
-                    <img
-                        className={`additional-circle__image additional-circle__image--hidden`}
-                        src={`/images/pizza-select/${next}.png`}
-                        alt=""
-                    />
+                <div className={`additional-circle ${isDark && 'additional-circle--dark'}`} >
+                    <div className="additional-circle__image-container" style={{ transform: `rotate(${180 * countRotation}deg)` }}>
+                        <img
+                            className="additional-circle__image"
+                            src={`/images/pizza/${currentPizza.image}`}
+                            alt=""
+                        />
+                    </div>
+
+                    {/* <div className="additional-circle__image-container">
+                        <img
+                            className={`additional-circle__image additional-circle__image--hidden`}
+                            src={`/images/pizza/${next}`}
+                            alt=""
+                        />
+                    </div> */}
 
                 </div>
 
                 <div className="main-circle__buttons">
-                    <button className="main-circle__button">add to cart</button>
+                    <button className="main-circle__button" onClick={() => dispatch(addToCart(currentPizza))}>add to cart</button>
                     <Link to="menu" className="main-circle__button">view all</Link>
                 </div>
             </div >

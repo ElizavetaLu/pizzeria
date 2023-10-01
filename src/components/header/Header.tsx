@@ -1,8 +1,11 @@
-import { useEffect, useState } from 'react' 
-import { useSelector } from 'react-redux' 
+import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import CartItemsAmount from '../cart-items-amount/CartItemsAmount'
 import Navigation from '../navigation/Navigation'
+import Switcher from '../switcher/Switcher'
 import Logo from '../logo/Logo'
 import './Header.scss'
+import Cart from '../../pages/menu/components/cart/Cart'
 
 
 const defaultOffset = 200;
@@ -12,6 +15,7 @@ const scrollPosition = () => window.scrollY || document.documentElement.scrollTo
 export default function Header() {
 
     const { isDark } = useSelector((state: any) => state.theme)
+    const { data } = useSelector((state: any) => state.cart)
 
     const [isHide, setIsHide] = useState(false)
 
@@ -40,12 +44,17 @@ export default function Header() {
                 <nav className="header__nav">
                     <Navigation />
 
-                    {/* <Switcher /> */}
-                    <button className={`header__button ${isDark && 'header__button--dark'}`}>order online</button>
+                    <Switcher />
 
-                    <button className="header__button-mobile">
+                    <div className='header__button-container'>
                         <img className={`header__button-icon ${isDark && 'header__button-icon--dark'}`} src="/images/icons/cart.png" alt="" />
-                    </button>
+                        {
+                        data.length !== 0 && <CartItemsAmount />
+                        }
+
+{/* <Cart/> */}
+                    </div>
+
                     <button className="header__button-mobile">
                         <img className={`header__button-icon ${isDark && 'header__button-icon--dark'}`} src="/images/icons/menu.png" alt="" />
                     </button>
